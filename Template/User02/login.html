@@ -1,57 +1,113 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login Title</title>
-    <link rel="stylesheet" href="icon/iconfont.css">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="application-name" content="Login Title" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>登录-网易帐号中心</title>
+    <link type="text/css" rel="stylesheet" href="icon/iconfont.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
-<body class="account-bg">
-    <div class="full overflow-hide body-bg">
-        <div class="account-box">
-            <section>
-                <form method="post" lay-filter="login-form" onsubmit="return false;">
-                    <div class="account-title">
-                        Account Login
+<body class="login-body">
+    <div id="app" class="login-box">
+        <div class="login-top shadow3 clearfix">
+            <div class="wrapper clearfix">
+                <h1 class="left"><a href="javascript:;"><img src="images/logo-a.png" /></a></h1>
+                <i class="left">|</i>
+                <h2 class="left">登录</h2>
+            </div>
+        </div>
+        <div class="login-mid">
+            <div class="wrapper login-main">
+                <div class="login-banner">
+                    <a href="javascript:;"><img src="images/login-banner2.png" /></a>
+                </div>
+                <div class="login-form">
+                    <div class="login-form-title">
+                        <ul class="login-form-title-tabs">
+                            <li class="active" @click="setBox()"><a href="javascript:;">普通登录</a></li>
+                            <li><a href="javascript:;">二维码登录</a></li>
+                        </ul>
                     </div>
-                    <div class="layui-form account-form">
-                        <div class="account-form-item">
-                            <input name="Account" autocomplete="off" placeholder="编号/账号/手机/邮箱." class="layui-input" type="text" lay-verify="required|s4-36"
-                                lay-verify-title="登录账号" />
-                        </div>
-                        <div class="account-form-item">
-                            <input name="Password" autocomplete="off" placeholder="请输入密码" class="layui-input" type="password" lay-verify="required|s6-36|safety"
-                                lay-verify-title="登录密码" />
-                        </div>
-                        <div class="account-form-item clearfix">
-                            <span>
-                                <input name="RememberMe" lay-skin="primary" title="记住密码" checked="checked" type="checkbox" value="true" />
-                            </span>
-                            <a asp-controller="account" asp-action="forgotpassword" class="right">找回密码? </a>
-                        </div>
-                       
-                        <div class="account-form-item clearfix">
-                            <div asp-validation-summary="All" class="validation-model-danger">错误描述：</div>
-                        </div>
-                        <div class="account-form-item submit-item">
-                            <button class="layui-btn layui-btn-normal" lay-submit lay-filter="login-form">立即提交</button>
-                        </div>
+                    <div class="login-form-box">
+                        <form id="login-form">
+                            <div class="login-form-group login-from-input">
+
+                            </div>
+                            <div class="login-form-tip">
+
+                            </div>
+                            <div class="login-form-group login-from-input">
+
+                            </div>
+                            <div class="login-form-tip">
+
+                            </div>
+                            <div class="login-form-group login-from-input">
+
+                            </div>
+                            <div class="login-form-des">
+
+                            </div>
+                            <div class="login-form-group">
+                                <a href="javascript:;" class="login-from-btn  <!--login-from-btn-disable-->">登  录</a>
+                            </div>
+                            <div class="login-form-des">
+
+                            </div>
+                        </form>
                     </div>
-                    <div class="account-descript clearfix">
-                        <p>
-                            <span>没有账号？您可
-                                <a  href="register.html">免费注册</a>
-                            </span>
-                            <a asp-controller="home" asp-action="index" class="right">帮助中心</a>
-                        </p>
+                    <div class="login-annouce">
+                        <img src="images/slide.png" />
+                        <a href="javascript:;" class="annouce-msg">公告：网易邮箱帐号升级公告</a>
                     </div>
-                </form>
-            </section>
+                </div>
+            </div>
+        </div>
+        <div class="login-footer container">
+            <div class="wrapper">
+                <p><a href="http://corp.163.com/eng/about/overview.html" target="_blank">About NetEase</a>-<a href="http://gb.corp.163.com/gb/about/overview.html" target="_blank">公司简介</a>-<a href="http://gb.corp.163.com/gb/contactus.html" target="_blank">联系方式</a>-<a href="http://reg.163.com/help/help_oauth2.html?v=20141215" target="_blank">OAuth2.0认证</a>-<a href="http://corp.163.com/gb/job/job.html" target="_blank">招聘信息</a>-<a href="http://help.163.com/" target="_blank">客户服务</a>-<a href="http://gb.corp.163.com/gb/legal.html" target="_blank">相关法律</a>-<a href="http://emarketing.biz.163.com/" target="_blank">网络营销</a></p>
+                <p>网易公司版权所有 ©1997-2018</p>
+            </div>
         </div>
     </div>
-</body>
+    <script type="text/javascript" src="lib/vue/vue.js"></script>
+    <script type="text/javascript">
+        var app = new Vue({
+            el: "#app",
+            methods: {
+                init: function () {
 
+                },
+                resize: function () {
+                    let $body = document.querySelector("body");
+                    if ($body.clientHeight - this.$el.clientHeight > 50) {
+                        let bodyPaddingTop = ($body.clientHeight - this.$el.clientHeight) / 2;
+                        if (bodyPaddingTop > 80) { bodyPaddingTop = 80; }
+                        $body.style.paddingTop = bodyPaddingTop + "px";
+                    } else {
+                        $body.style.paddingTop = "0px";
+                    }
+                },
+                setBox: function () {
+                    alert('1');
+                }
+            },
+            mounted: function () {
+                this.$nextTick(() => {
+                    let that = this;
+                    this.resize();
+                    window.onresize = () => {
+                        return (() => {
+                            that.resize();
+                        })()
+                    };
+                })
+            }
+        })
+    </script>
+</body>
 </html>
