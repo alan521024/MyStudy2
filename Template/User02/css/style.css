@@ -1,0 +1,137 @@
+﻿@charset "utf-8";
+* { margin: 0; padding: 0; border: 0; outline: 0; background: transparent; list-style: none; box-sizing: border-box; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+ico16, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td { font-size: 12px; font-family: "微软雅黑","Helvetica Neue", Helvetica, Arial, sans-serif; text-decoration: none; }
+/*"微软雅黑","宋体",Arial,sans-serif*/
+
+a { text-decoration: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+ol, ul, li { list-style: none; }
+image { border: none; }
+img.img-view { max-width: 100%; max-height: 100%; }
+
+/*self-cst*/
+html, body { width: 100%; height: 100%; overflow: hidden; }
+
+/** clearfix **/
+.clearfix:after { content: ''; display: table; clear: both; /*height: 0;  overflow:hidden;*/ }
+.clearfix { *zoom: 1; }
+
+/*flow*/
+.left { float: left; }
+.right { float: right; }
+
+/*package*/
+.full { position: relative; width: 100%; height: 100%; }
+.container { position: relative; width: 100%; }
+.wrapper { position: relative; width: 1025px; margin: 0px auto; height: inherit; }
+.overflow-hide { overflow: hidden; }
+
+/*validation-danger*/
+.validation-summary-errors { }
+    .validation-summary-errors ul { }
+        .validation-summary-errors ul li { }
+.validation-model-danger ul li { color: #f00; }
+
+/*shadow*/
+.shadow1 { -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); }
+.shadow2 { -webkit-box-shadow: 0px 1px 2px #bbb; -moz-box-shadow: 0px 1px 2px #bbb; box-shadow: 0px 1px 2px #bbb; }
+
+/*box*/
+.box { border: 1px solid #ddd; }
+    .box .box-title { width: 100%; }
+    .box .box-inner { }
+.box-no-border { border: none; }
+
+.box-theme1 { background: #fff; }
+    .box-theme1 .box-title { padding: 10px 15px; border-bottom: 1px solid #eee; background: #f8fafc; box-shadow: none; font-size: 0; color: #666; }
+    .box-theme1 .box-inner { padding: 15px; }
+
+/*徽章*/
+.badge, .badge-dot, .badge-rim { position: relative; display: inline-block; padding: 0 6px; font-style: normal; font-size: 12px; text-align: center; background-color: #FF5722; color: #fff; border-radius: 2px; }
+.badge { height: 18px; line-height: 18px; }
+.badge-dot { width: 8px; height: 8px; padding: 0; border-radius: 50%; }
+.badge-rim { height: 18px; line-height: 18px; border-width: 1px; border-style: solid; background-color: #fff; color: #666; }
+
+/**
+ * account login/register css
+ */
+.account-bg { min-height: 500px; background: url(../images/body-bg.jpg) repeat-x; }
+.account-box { width: 480px; margin: 100px auto 0; background: #fff; background-color: #fff; -webkit-box-shadow: 0 2px 16px rgba(0, 0, 0, .12); -moz-box-shadow: 0 2px 16px rgba(0, 0, 0, .12); box-shadow: 0 2px 16px rgba(0, 0, 0, .12); }
+
+    .account-box .account-title { padding: 35px 0 0; font-size: 24px; color: #1E9FFF; text-align: center; }
+    .account-box .account-form { padding: 35px 0 0; }
+        .account-box .account-form a { color: #1E9FFF; }
+            .account-box .account-form a:hover { text-decoration: underline; }
+        .account-box .account-form .account-form-item { width: 360px; margin: 0 auto 20px auto; }
+        .account-box .account-form .submit-item { margin-bottom: 35px; }
+            .account-box .account-form .submit-item button { width: 100%; }
+    .account-box .account-descript { width: 360px; margin: 0 auto; padding: 25px 0; border-top: 1px solid #ddd; }
+        .account-box .account-descript p { line-height: 30px; font-size: 14px; color: #666; }
+    .account-box .account-validation-summary { padding: 15px 0px; }
+
+/**
+ *  user css
+ */
+.user-body { background: #eee; }
+    .user-body, .user-body a:link, .user-body a:visited { color: #14191e; }
+
+.header-bg { background: url(../images/header-bg.png) repeat-x; }
+
+.header { padding: 14px 0px; }
+    .header .logo { width: 153px; }
+    .header .menu { }
+        .header .menu .item { margin: 0 5px 0 10px; }
+            .header .menu .item a { line-height: 28px; color: #fff; font-size: 14px; }
+                .header .menu .item a:hover { color: rgba(255,255,255,0.8); }
+                .header .menu .item a .badge { height: 14px; line-height: 14px; }
+
+.main { margin-top: 10px; }
+    .main .slider { width: 216px; background: #f8fafc; }
+        .main .slider .profile { padding: 32px 0 24px; }
+            .main .slider .profile .avator { position: relative; width: 100px; height: 100px; box-sizing: border-box; border: 4px solid #d9dde1; border-radius: 50px; margin: 0 auto; text-align: center; overflow: hidden; }
+                .main .slider .profile .avator .avator-img { width: 92px; height: 92px; }
+            .main .slider .profile .descript { width: 160px; line-height: 44px; margin: 0 auto; overflow: hidden; }
+            .main .slider .profile .descript { font-size: 16px; text-align: center; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+            .main .slider .profile .tag { text-align: center; }
+                .main .slider .profile .tag dd { display: inline-block; position: relative; background-color: #fff; width: 26px; height: 26px; border-radius: 13px; box-sizing: border-box; padding-top: 2.5px; margin-right: 12px; color: #a9adb2; cursor: pointer; }
+                    .main .slider .profile .tag dd.active { color: #f01414; }
+                        .main .slider .profile .tag dd.active:hover { color: #dd0909 }
+                    .main .slider .profile .tag dd:hover { color: #666; }
+
+        .main .slider .slider-title { font-size: 16px; line-height: 24px; margin: 12px 24px; font-weight: 700; }
+        .main .slider .slider-line { height: 1px; background-color: #d9dde1; margin: 0 24px; }
+
+        .main .slider .nav { padding: 10px 0 25px; }
+            .main .slider .nav li { }
+                .main .slider .nav li a { display: block; position: relative; height: 48px; line-height: 48px; padding: 0 0 0 54px; transition: background-color .3s ease; }
+                    .main .slider .nav li a span.arr { position: absolute; top: 0px; right: 25px; }
+                    .main .slider .nav li a:hover { background-color: #f3f5f7; color: #f01414; }
+                    .main .slider .nav li a.active { color: #fff; background-color: #f01414; }
+
+
+    .main .content { width: 800px; }
+        .main .content .crumbs { background: #fff; padding: 10px 0px 15px; margin-bottom: 10px; }
+            .main .content .crumbs .crumbs-path { line-height: 32px; padding: 0px 15px; color: #666; }
+                .main .content .crumbs .crumbs-path a, .main .content .crumbs .crumbs-path i.iconfont, .main .content .crumbs .crumbs-path span { font-size: 14px; }
+            .main .content .crumbs .crumbs-sub { padding: 0px 15px; }
+                .main .content .crumbs .crumbs-sub ul li { float: left; margin-right: 15px; }
+                    .main .content .crumbs .crumbs-sub ul li a { line-height: 28px; }
+                        .main .content .crumbs .crumbs-sub ul li a:hover, .main .content .crumbs .crumbs-sub ul li a.active { color: #f01414; }
+
+
+/*backgroup*/
+.bg-red { background-color: #FF5722 !important }
+.bg-orange { background-color: #FFB800 !important }
+.bg-green { background-color: #009688 !important }
+.bg-cyan { background-color: #2F4056 !important }
+.bg-blue { background-color: #1E9FFF !important }
+.bg-black { background-color: #393D49 !important }
+.bg-gray { background-color: #eee !important; color: #666 !important }

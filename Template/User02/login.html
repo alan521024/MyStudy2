@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Title</title>
+    <link rel="stylesheet" href="icon/iconfont.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="account-bg">
+    <div class="full overflow-hide body-bg">
+        <div class="account-box">
+            <section>
+                <form method="post" lay-filter="login-form" onsubmit="return false;">
+                    <div class="account-title">
+                        Account Login
+                    </div>
+                    <div class="layui-form account-form">
+                        <div class="account-form-item">
+                            <input name="Account" autocomplete="off" placeholder="编号/账号/手机/邮箱." class="layui-input" type="text" lay-verify="required|s4-36"
+                                lay-verify-title="登录账号" />
+                        </div>
+                        <div class="account-form-item">
+                            <input name="Password" autocomplete="off" placeholder="请输入密码" class="layui-input" type="password" lay-verify="required|s6-36|safety"
+                                lay-verify-title="登录密码" />
+                        </div>
+                        <div class="account-form-item clearfix">
+                            <span>
+                                <input name="RememberMe" lay-skin="primary" title="记住密码" checked="checked" type="checkbox" value="true" />
+                            </span>
+                            <a asp-controller="account" asp-action="forgotpassword" class="right">找回密码? </a>
+                        </div>
+                       
+                        <div class="account-form-item clearfix">
+                            <div asp-validation-summary="All" class="validation-model-danger">错误描述：</div>
+                        </div>
+                        <div class="account-form-item submit-item">
+                            <button class="layui-btn layui-btn-normal" lay-submit lay-filter="login-form">立即提交</button>
+                        </div>
+                    </div>
+                    <div class="account-descript clearfix">
+                        <p>
+                            <span>没有账号？您可
+                                <a  href="register.html">免费注册</a>
+                            </span>
+                            <a asp-controller="home" asp-action="index" class="right">帮助中心</a>
+                        </p>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

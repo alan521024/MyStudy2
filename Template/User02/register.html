@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="icon/iconfont.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="account-bg">
+    <div class="full overflow-hide body-bg">
+        <div class="account-box">
+            <section>
+                <form method="post" lay-filter="reg-form" onsubmit="return false;">
+                    <div class="account-title">
+                        Account Register
+                    </div>
+                    <div class="layui-form account-form">
+
+                        <div class="account-form-item">
+                            <input name="Email" asp-for="Email" autocomplete="off" placeholder="请输入邮箱地址" class="layui-input" type="text" lay-verify="required|s4-36|email"
+                                lay-verify-title="邮箱地址" />
+                        </div>
+
+                        <!-- <div class="account-form-item">
+                            <input name="Mobile" asp-for="Mobile" autocomplete="off" placeholder="请输入手机号码" class="layui-input" type="text" lay-verify="required|s4-36|phone" lay-verify-title="手机号码" />
+                        </div> -->
+
+                        <div class="account-form-item">
+                            <input name="Password" autocomplete="off" placeholder="请输入密码" class="layui-input" type="password" lay-verify="required|s6-36|safety"
+                                lay-verify-title="登录密码" />
+                        </div>
+                        <div class="account-form-item">
+                            <input name="ConfirmPassword" autocomplete="off" placeholder="确认密码" class="layui-input" type="password" lay-verify="required|s6-36|safety"
+                                lay-verify-title="确认密码" />
+                        </div>
+                        <div class="account-form-item clearfix">
+                            <a id="change-register" asp-action="register" asp-route-returnurl="@this.GetReturnUrl()">手机注册? </a>
+
+                            <!-- <a id="change-register" asp-action="register" asp-route-returnurl="@this.GetReturnUrl()" asp-route-regtype="email">邮箱注册? </a> -->
+                            <a asp-controller="account" asp-action="forgotpassword" class="right">找回密码? </a>
+                        </div>
+                        <div class="account-form-item clearfix">
+                            <div asp-validation-summary="All" class="validation-model-danger"></div>
+                        </div>
+                        <div class="account-form-item submit-item">
+                            <button class="layui-btn layui-btn-normal" lay-submit lay-filter="reg-form">立即注册</button>
+                        </div>
+                    </div>
+                    <div class="account-descript clearfix">
+                        <p>
+                            <span>已有账号？您可
+                                <a href="login.html">去登录</a>
+                            </span>
+                            <a asp-controller="home" asp-action="index" class="right">帮助中心</a>
+                        </p>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
