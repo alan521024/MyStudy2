@@ -21,13 +21,15 @@ image { border: none; }
 img.img-view { max-width: 100%; max-height: 100%; }
 
 
-a { color: #2db7f5; background: transparent; text-decoration: none; outline: none; cursor: pointer; transition: color .3s ease; }
-    a, a:hover { color: #00c2c2; }
-        a:active, a:hover { outline: 0; text-decoration: none; }
-        a:hover { color: #57c5f7; }
+a { color: #333; line-height: 12px; font-size: 12px; background: transparent; text-decoration: none; outline: none; cursor: pointer; transition: color .3s ease; }
+    a:hover { color: #00c2c2; }
+    a:active, a:hover { outline: 0; text-decoration: none; }
+    a .iconfont { color: #333; }
+    a:hover .iconfont { color: #00c2c2; }
 
-.link-text { color: #333; margin: 0 10px; line-height: 12px; font-size: 12px; text-decoration: none; }
-    .link-text:hover { color: #00c2c2; line-height: 12px; text-decoration: none; }
+
+.link-text { color: #666; text-decoration: none; }
+    .link-text:hover { color: #333; }
 
 .label-text { color: #333; }
 
@@ -87,22 +89,49 @@ a { color: #2db7f5; background: transparent; text-decoration: none; outline: non
     .box-theme1 .box-inner { padding: 15px; }
 
 /*login*/
+
+.account-form .form-item { width: 100%; margin-bottom: 16px; clear: both; }
+.account-form .form-input { width: 100%; height: 40px; padding: 0 10px; vertical-align: middle; background: #fff; border: 1px solid #d7d8d9; box-shadow: none; }
+    .account-form .form-input input[type="text"], .account-form .form-input input[type="password"] { display: block; width: 100%; line-height: 36px; box-sizing: border-box; outline: 0; font-size: 12px; }
+    .account-form .form-input:focus, .account-form .form-input:hover { border-color: #009191; }
+        .account-form .form-input:focus input, .account-form .form-textarea:focus input { -webkit-box-shadow: 0 0 2px #a6cfff; -moz-box-shadow: 0 0 2px #a6cfff; -ms-box-shadow: 0 0 2px #a6cfff; -o-box-shadow: 0 0 2px #a6cfff; box-shadow: 0 0 2px #a6cfff; }
+.account-form .form-submit { width: 100%; height: 40px; padding: 0 10px; margin: 0px auto; vertical-align: middle; background: #009191; border-color: #009191; color: #fff; cursor: pointer; }
+    .account-form .form-submit:hover { background: #0c7979; }
+.account-form .form-submit-disable, .account-form .form-submit-disable:hover { cursor: default; background: #8ed7d7; }
+.account-form .form-des { width: 100%; margin-bottom: 16px; clear: both; }
+
 .login-min { width: 380px; margin: 0 auto; min-height: 442px; background: #fff; }
 .login-box { position: relative; }
+    .login-box .login-nav, .login-box .login-form, .login-box .login-foot { width: 320px; margin: 0px auto; }
 
     .login-box .login-nav { margin-bottom: 28px; }
-        .login-box .login-nav .login-tab { display: table; color: #909090; width: 280px; margin: 0 auto; padding-top: 38px; height: 49px; font-size: 16px; font-weight: 600; line-height: 49px; }
-            .login-box .login-nav .login-tab span { display: table-cell; color: #dcdcdc; font-size: 14px; width: 140px; text-align: center; border-bottom: 1px solid #e7e7e7; cursor: pointer; }
-                .login-box .login-nav .login-tab span.active { color: #464646 !important; border-bottom: 3px solid #12c286 !important; }
+        .login-box .login-nav .login-tab { display: table; width: 100%; height: 49px; line-height: 49px; font-size: 16px; color: #909090; padding-top: 38px; font-weight: 600; overflow: hidden; }
+            .login-box .login-nav .login-tab span { display: table-cell; width: 50%; color: #dcdcdc; font-size: 14px; text-align: center; border-bottom: 1px solid #e7e7e7; cursor: pointer; }
+                .login-box .login-nav .login-tab span.active { color: #464646 !important; border-bottom: 3px solid #009191 !important; }
 
     .login-box .login-form { }
-        .login-box .login-form .form-item { width: 100%; margin-bottom: 16px; clear: both; }
-        .login-box .login-form .form-input { width: 280px; height: 40px; padding: 0 10px; margin: 0px auto; vertical-align: middle; background: #fff; border: 1px solid #d7d8d9; box-shadow: none; }
-            .login-box .login-form .form-input input[type="text"], .login-box .login-form .form-input input[type="password"] { display: block; width: 100%; line-height: 36px; box-sizing: border-box; outline: 0; font-size: 12px; }
-            .login-box .login-form .form-input:focus, .login-box .login-form .form-input:hover { border-color: #00c1de; }
-            .login-box .login-form .form-input:focus, .login-box .login-form .form-textarea:focus { border-color: #70a5e0; -webkit-box-shadow: 0 0 2px #a6cfff; -moz-box-shadow: 0 0 2px #a6cfff; -ms-box-shadow: 0 0 2px #a6cfff; -o-box-shadow: 0 0 2px #a6cfff; box-shadow: 0 0 2px #a6cfff; }
-            .login-box .login-form .form-input:focus, .login-box .login-form .form-textarea:focus { border: 1px solid #a6a6a6; border-top-color: rgb(166, 166, 166); border-right-color: rgb(166, 166, 166); border-bottom-color: rgb(166, 166, 166); border-left-color: rgb(166, 166, 166); }
-        .login-box .login-form .form-submit { display: block; width: 280px; height: 40px; padding: 0 10px; margin: 0px auto; vertical-align: middle; background: #00C1DE; border-color: #00C1DE; color:#fff; }
+
+    .login-box .login-foot { }
+        .login-box .login-foot .login-link { }
+        .login-box .login-foot .login-platform { margin-top: 15px; }
+            .login-box .login-foot .login-platform a { color: #666; }
+
+.register-min { width: 380px; margin: 0 auto; min-height: 442px; background: #fff; }
+.register-box { position: relative; }
+    .register-box .register-nav, .register-box .register-form, .register-box .register-foot { width: 320px; margin: 0px auto; }
+
+    .register-box .register-nav { margin-bottom: 20px; }
+        .register-box .register-nav span { display: block; text-align: center; height: 52px; line-height: 52px; font-weight: 600; border-bottom: 1px solid #e7e7e7; font-size: 16px; color: #464646; }
+
+    .register-box .register-form { }
+
+        .register-box .register-form .des-center { width:100%; display:inline-block; text-align:center; }
+
+    .register-box .register-foot { text-align:center; }
+        .register-box .register-foot a { padding:10px 0px 5px 0px; color: #009191; font-size: 14px; }
+        .register-box .register-foot a:hover { text-decoration:underline; }
+
+
 
 /*foot*/
 .foot { font-size: 12px; line-height: 12px; color: #333; background-color: #f8f8f8; }
@@ -125,6 +154,8 @@ a { color: #2db7f5; background: transparent; text-decoration: none; outline: non
         .account-head .account-logo .logo-img { margin-top: 20px; width: 169px; height: 30px; }
     .account-head .account-menu { }
         .account-head .account-menu li { float: left; }
+        .account-head .account-menu a { padding: 0px 10px; }
+
 .account-foot { position: fixed; bottom: 0; z-index: 99; }
 .account-login { position: fixed; top: 120px; }
     .account-login .accoung-login-frame { position: relative; width: 380px; height: 464px; left: 100%; padding: 0px; margin: 0px; padding-top: 22px; margin-left: -380px; border: none; background: transparent; }
