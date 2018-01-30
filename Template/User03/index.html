@@ -11,7 +11,7 @@
     <link type="text/css" rel="stylesheet" href="icon/iconfont.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
-<body class="accoung-body">
+<body class="layout-body">
     <div class="container shadow4 head">
         <div class="wrapper clearfix">
             <div class="left logo">
@@ -28,7 +28,102 @@
     </div>
     <div class="container">
         <div class="wrapper">
-            
+            <div class="clearfix layout-main">
+                <div class="left slider">
+                    <div class="box box-no-border">
+                        <div class="box-title"></div>
+                        <div class="box-inner">
+                            <div class="profile">
+                                <div class="avator">
+                                    <img class="avator-img" src="//img.mukewang.com/5458676e0001af7702200220-200-200.jpg">
+                                </div>
+                                <p class="descript">Admin</p>
+                                <dl class="clearfix tag">
+                                    <dd>
+                                        <i class="icon iconfont d-icon-self2"></i>
+                                    </dd>
+                                    <dd>
+                                        <i class="icon iconfont d-icon-email2"></i>
+                                    </dd>
+                                    <dd class="active">
+                                        <i class="icon iconfont d-icon-phone1"></i>
+                                    </dd>
+                                    <dd>
+                                        <i class="icon iconfont d-icon-system2"></i>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <h2 class="slider-title">账户管理</h2>
+                            <div class="slider-line"></div>
+                            <div class="nav">
+                                <ul>
+                                    <li>
+                                        <a asp-controller="user" asp-action="index" class="active">
+                                            个人资料
+                                            <span class="arr">
+                                                <i class="icon iconfont d-icon-right1"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="">
+                                            实名认证
+                                            <span class="arr">
+                                                <i class="icon iconfont d-icon-right1"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="">
+                                            账号安全
+                                            <span class="arr">
+                                                <i class="icon iconfont d-icon-right1"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="">
+                                            支付管理
+                                            <span class="arr">
+                                                <i class="icon iconfont d-icon-right1"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="">
+                                            收件地址
+                                            <span class="arr">
+                                                <i class="icon iconfont d-icon-right1"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="">
+                                            操作记录
+                                            <span class="arr">
+                                                <i class="icon iconfont d-icon-right1"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a asp-controller="account" asp-action="logoff">
+                                            退出登录
+                                            <span class="arr">
+                                                <i class="icon iconfont d-icon-right1"></i>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right content">
+                    <div class="content-tip"></div>
+                    <div class="content-title"><h2>个人资料</h2></div>
+                    <div class="content-box"></div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="container foot">
