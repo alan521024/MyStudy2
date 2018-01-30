@@ -12,7 +12,7 @@ table, caption, tbody, tfoot, thead, tr, th, td { color: #666; font-size: 12px; 
 /*"微软雅黑","宋体",Arial,sans-serif*/
 
 /*self-cst*/
-html, body { width: 100%; height: 100%; /*overflow: hidden;*/ }
+html, body {  width: 100%; height: 100%; /*overflow: hidden;*/}
 
 a { text-decoration: none; }
 table { border-collapse: collapse; border-spacing: 0; }
@@ -39,10 +39,10 @@ a { color: #333; line-height: 12px; font-size: 12px; background: transparent; te
 .clearfix:after { content: ''; display: table; clear: both; /*height: 0;  overflow:hidden;*/ }
 .clearfix { *zoom: 1; }
 
+
 /*flow*/
 .left { float: left; }
 .right { float: right; }
-
 
 /*package*/
 .full { position: relative; width: 100%; height: 100%; }
@@ -88,18 +88,46 @@ a { color: #333; line-height: 12px; font-size: 12px; background: transparent; te
     .box-theme1 .box-title { padding: 10px 15px; border-bottom: 1px solid #eee; background: #f8fafc; box-shadow: none; font-size: 0; color: #666; }
     .box-theme1 .box-inner { padding: 15px; }
 
+/*cmpt-step*/
+.cmpt-step:after { clear: both; content: " "; display: block; font-size: 0; height: 0; visibility: hidden; }
+.cmpt-step { color: #B7B7B7; font-size: 12px; list-style: none outside none; overflow: hidden; position: relative; }
+    .cmpt-step li { float: left; height: 54px; margin: 0; position: relative; }
+.cmpt-step-2 li { width: 49%; }
+.cmpt-step-3 li { width: 33%; }
+.cmpt-step-4 li { width: 24%; }
+.cmpt-step-5 li { width: 19%; }
+.cmpt-step-6 li { width: 16%; }
+.cmpt-step li { float: left; text-align: center; }
+.cmpt-step .cmpt-step-active .left { background: #fa7200 url(../images/step-progress.png) -20px -66px no-repeat; width: 6px; height: 5px; float: left; position: relative; z-index: 10; overflow: hidden; }
+.cmpt-step .cmpt-step-inactive .left { background: #cccccc url(../images/step-progress.png) -20px -73px no-repeat; width: 6px; height: 5px; float: left; position: relative; z-index: 10; overflow: hidden; }
+.cmpt-step .cmpt-step-active .right { background: #fa7200 url(../images/step-progress.png) -7px -66px no-repeat; width: 6px; height: 5px; float: right; position: absolute; z-index: 10; right: 0; overflow: hidden; }
+.cmpt-step .cmpt-step-inactive .right { background: #cccccc url(../images/step-progress.png) -7px -73px no-repeat; width: 6px; height: 5px; float: right; position: absolute; z-index: 10; right: 0; overflow: hidden; }
+.cmpt-step .cmpt-step-active .all { background-color: #fa7200; height: 5px; margin: auto 5px; position: relative; z-index: 9; _margin: 0; overflow: hidden; _left: -3px; }
+.cmpt-step .cmpt-step-inactive .all { background-color: #cccccc; height: 5px; margin: auto 5px; position: relative; z-index: 9; _margin: 0; overflow: hidden; _left: -3px; }
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .cmpt-step .cmpt-step-active .all { background-color: #fa7200; height: 5px; margin: auto 5px auto 0; position: relative; z-index: 9; overflow: hidden; }
+    .cmpt-step .cmpt-step-inactive .all { background-color: #cccccc; height: 5px; margin: auto 5px auto 0; position: relative; z-index: 9; overflow: hidden; }
+}
+
+.cmpt-step .cmpt-step-active .step-no { background: url(../images/step-progress.png) -2px -1px no-repeat; width: 30px; height: 30px; color: #FFFFFF; z-index: 99; position: absolute; left:50%; margin-top: -25px; padding-top: 5px; margin-left:-15px; font-size: 14px; *height: 24px; *padding-top: 6px; }
+.cmpt-step .cmpt-step-inactive .step-no { background: url(../images/step-progress.png) -2px -32px no-repeat; width: 30px; height: 30px; color: #FFFFFF; z-index: 99; position: absolute; left:50%; margin-top: -25px; padding-top: 5px;margin-left:-15px;  font-size: 14px; *height: 24px; *padding-top: 6px; }
+.cmpt-step .start .left, .cmpt-step .end .right { background-color: transparent; }
+.cmpt-step .step-name { color: #888888; font-weight: 700; margin-top: 5px; }
+.cmpt-step .step-back { padding-top: 12px; padding-bottom: 13px; z-index: -1; height: 5px; _height: 0; }
+
+
+/*foot*/
+.foot { font-size: 12px; line-height: 12px; color: #333; background-color: #f8f8f8; }
+    .foot a { color: #333; text-decoration: none; font-size: 12px; margin: 0 10px; }
+    .foot .right { text-align: right; }
+    .foot .foot-content { padding: 30px 5px; background-color: #f8f8f8; background: url(/images/copyright-bg.png) right -1px no-repeat; }
+    .foot .foot-tag-img1 { height: 26px; }
+    .foot .foot-link { position: relative; left: -10px; padding-top: 18px; line-height: 12px; }
+    .foot .foot-intro { padding-top: 14px; position: relative; right: -10px; }
+    .foot .foot-copyright { padding-top: 20px; }
+
 /*login*/
-
-.account-form .form-item { width: 100%; margin-bottom: 16px; clear: both; }
-.account-form .form-input { width: 100%; height: 40px; padding: 0 10px; vertical-align: middle; background: #fff; border: 1px solid #d7d8d9; box-shadow: none; }
-    .account-form .form-input input[type="text"], .account-form .form-input input[type="password"] { display: block; width: 100%; line-height: 36px; box-sizing: border-box; outline: 0; font-size: 12px; }
-    .account-form .form-input:focus, .account-form .form-input:hover { border-color: #009191; }
-        .account-form .form-input:focus input, .account-form .form-textarea:focus input { -webkit-box-shadow: 0 0 2px #a6cfff; -moz-box-shadow: 0 0 2px #a6cfff; -ms-box-shadow: 0 0 2px #a6cfff; -o-box-shadow: 0 0 2px #a6cfff; box-shadow: 0 0 2px #a6cfff; }
-.account-form .form-submit { width: 100%; height: 40px; padding: 0 10px; margin: 0px auto; vertical-align: middle; background: #009191; border-color: #009191; color: #fff; cursor: pointer; }
-    .account-form .form-submit:hover { background: #0c7979; }
-.account-form .form-submit-disable, .account-form .form-submit-disable:hover { cursor: default; background: #8ed7d7; }
-.account-form .form-des { width: 100%; margin-bottom: 16px; clear: both; }
-
 .login-min { width: 380px; margin: 0 auto; min-height: 442px; background: #fff; }
 .login-box { position: relative; }
     .login-box .login-nav, .login-box .login-form, .login-box .login-foot { width: 320px; margin: 0px auto; }
@@ -116,6 +144,7 @@ a { color: #333; line-height: 12px; font-size: 12px; background: transparent; te
         .login-box .login-foot .login-platform { margin-top: 15px; }
             .login-box .login-foot .login-platform a { color: #666; }
 
+/*register*/
 .register-min { width: 380px; margin: 0 auto; min-height: 442px; background: #fff; }
 .register-box { position: relative; }
     .register-box .register-nav, .register-box .register-form, .register-box .register-foot { width: 320px; margin: 0px auto; }
@@ -125,25 +154,29 @@ a { color: #333; line-height: 12px; font-size: 12px; background: transparent; te
 
     .register-box .register-form { }
 
-        .register-box .register-form .des-center { width:100%; display:inline-block; text-align:center; }
+        .register-box .register-form .des-center { width: 100%; display: inline-block; text-align: center; }
 
-    .register-box .register-foot { text-align:center; }
-        .register-box .register-foot a { padding:10px 0px 5px 0px; color: #009191; font-size: 14px; }
-        .register-box .register-foot a:hover { text-decoration:underline; }
+    .register-box .register-foot { text-align: center; }
+        .register-box .register-foot a { padding: 10px 0px 5px 0px; color: #009191; font-size: 14px; }
+            .register-box .register-foot a:hover { text-decoration: underline; }
+
+/*account-form*/
+.account-form { }
+    .account-form .form-title { display: inline-block; width: 100%; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 2px solid #d8d8d8; text-align: left; font-size: 24px; }
+        .account-form .form-title h3 { color: #14191e; font-size: 24px; line-height: 24px; }
+    .account-form .form-item { width: 100%; margin-bottom: 16px; clear: both; }
+    .account-form .form-input { width: 100%; height: 40px; padding: 0 10px; vertical-align: middle; background: #fff; border: 1px solid #d7d8d9; box-shadow: none; }
+        .account-form .form-input input[type="text"], .account-form .form-input input[type="password"] { display: block; width: 100%; line-height: 36px; box-sizing: border-box; outline: 0; font-size: 12px; }
+        .account-form .form-input:focus, .account-form .form-input:hover { border-color: #009191; }
+            .account-form .form-input:focus input, .account-form .form-textarea:focus input { -webkit-box-shadow: 0 0 2px #a6cfff; -moz-box-shadow: 0 0 2px #a6cfff; -ms-box-shadow: 0 0 2px #a6cfff; -o-box-shadow: 0 0 2px #a6cfff; box-shadow: 0 0 2px #a6cfff; }
+    .account-form .form-submit { width: 100%; height: 40px; padding: 0 10px; margin: 0px auto; vertical-align: middle; background: #009191; border-color: #009191; color: #fff; cursor: pointer; }
+        .account-form .form-submit:hover { background: #0c7979; }
+    .account-form .form-submit-disable, .account-form .form-submit-disable:hover { cursor: default; background: #8ed7d7; }
+    .account-form .form-des { width: 100%; margin-bottom: 16px; clear: both; }
 
 
 
-/*foot*/
-.foot { font-size: 12px; line-height: 12px; color: #333; background-color: #f8f8f8; }
-    .foot a { color: #333; text-decoration: none; font-size: 12px; margin: 0 10px; }
-    .foot .right { text-align: right; }
-    .foot .foot-content { padding: 30px 5px; background-color: #f8f8f8; background: url(/images/copyright-bg.png) right -1px no-repeat; }
-    .foot .foot-tag-img1 { height: 26px; }
-    .foot .foot-link { position: relative; left: -10px; padding-top: 18px; line-height: 12px; }
-    .foot .foot-intro { padding-top: 14px; position: relative; right: -10px; }
-    .foot .foot-copyright { padding-top: 20px; }
-
-/*account[login/register]*/
+/*account-layout[login/register]*/
 .accoung-body { background: #ecf1f1; }
 .account-bg { width: 100%; height: 100%; overflow-x: hidden; position: relative; background-color: #ecf1f1; }
     .account-bg img { position: absolute; left: 50%; margin-left: -960px; }
@@ -156,6 +189,14 @@ a { color: #333; line-height: 12px; font-size: 12px; background: transparent; te
         .account-head .account-menu li { float: left; }
         .account-head .account-menu a { padding: 0px 10px; }
 
-.account-foot { position: fixed; bottom: 0; z-index: 99; }
+.account-foot { position: fixed; bottom: 0; height: 120px; z-index: 99; }
+
 .account-login { position: fixed; top: 120px; }
     .account-login .accoung-login-frame { position: relative; width: 380px; height: 464px; left: 100%; padding: 0px; margin: 0px; padding-top: 22px; margin-left: -380px; border: none; background: transparent; }
+
+.account-main { padding-top:85px; padding-bottom:135px; /*margin-top: 85px; margin-bottom: 135px;*/ }
+    .account-main .account-main-inner {min-height: 340px; background: #fff;  border: 1px solid #f4f4f4; }
+
+.account-box { width: 50%; margin:100px auto;}
+    .account-box .account-box-title {}
+    .account-box .account-form { width: 400px; margin: 0 auto; margin-top:50px; }
