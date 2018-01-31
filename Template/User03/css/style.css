@@ -78,6 +78,11 @@ a { color: #333; line-height: 12px; font-size: 12px; background: transparent; te
         .validation-summary-errors ul li { }
 .validation-model-danger ul li { color: #f00; }
 
+/*captcha*/
+.captcha-code { font-family: "iconfont" !important; font-size: 16px; font-style: normal; cursor:pointer; }
+    .captcha-code:before { width: 40px; line-height: 36px; content: "\e612"; text-align: center; left: 0px; }
+    .captcha-code span { padding-left:15px; padding-left:8px;}
+
 /*box*/
 .box { border: 1px solid #ddd; }
     .box .box-title { width: 100%; }
@@ -87,6 +92,35 @@ a { color: #333; line-height: 12px; font-size: 12px; background: transparent; te
 .box-theme1 { background: #fff; }
     .box-theme1 .box-title { padding: 10px 15px; border-bottom: 1px solid #eee; background: #f8fafc; box-shadow: none; font-size: 0; color: #666; }
     .box-theme1 .box-inner { padding: 15px; }
+
+/*form-group*/
+.form-group { }
+    .form-group .form-item { width: 100%; margin-bottom: 16px; clear: both; }
+    .form-group .form-input, .form-group .captcha-code { width: 100%; height: 40px; padding: 0 10px; vertical-align: middle; background: #fff; border: 1px solid #d7d8d9; box-shadow: none; border-radius: 2px; }
+        .form-group .form-input input[type="text"], .form-group .form-input input[type="password"] { display: block; width: 100%; line-height: 36px; box-sizing: border-box; outline: 0; font-size: 12px; }
+        .form-group .form-input:focus, .form-group .form-input:hover { border-color: #009191; }
+            .form-group .form-input:focus input, .form-group .form-textarea:focus input { -webkit-box-shadow: 0 0 2px #a6cfff; -moz-box-shadow: 0 0 2px #a6cfff; -ms-box-shadow: 0 0 2px #a6cfff; -o-box-shadow: 0 0 2px #a6cfff; box-shadow: 0 0 2px #a6cfff; }
+    .form-group .form-submit { width: 100%; height: 40px; padding: 0 10px; margin: 0px auto; vertical-align: middle; background: #009191; border-color: #009191; color: #fff; cursor: pointer; }
+        .form-group .form-submit:hover { background: #0c7979; }
+    .form-group .form-submit-disable, .form-group .form-submit-disable:hover { cursor: default; background: #8ed7d7; }
+    .form-group .form-des { width: 100%; margin-bottom: 16px; clear: both; }
+
+    .form-group .form-input-icon { position: relative; font-family: "iconfont" !important; font-size: 16px; font-style: normal; padding-left: 40px; }
+        .form-group .form-input-icon:before { position: absolute; width: 40px; line-height: 36px; text-align: center; left: -2px; }
+    .form-group .form-input-user:before { content: "\e63c"; }
+    .form-group .form-input-password:before { content: "\e69b"; }
+    .form-group .form-input-sms:before { content: "\e772"; }
+    .form-group .form-input-email:before { content: "\e660"; }
+    .form-group .form-input-captcha:before { content: "\e612"; }
+
+    .form-group .form-input-sms { width: 213px; margin-right: 5px; }
+    .form-group .form-btn-get-sms { width: 100px; }
+
+    .form-group .form-button { cursor: pointer; color: #009191; border-radius: 2px; }
+        .form-group .form-button:focus, .form-group .form-button:hover { color: #0c7979; border-color: #009191; }
+
+    .form-group .captcha-code {}
+
 
 /*cmpt-step*/
 .cmpt-step:after { clear: both; content: " "; display: block; font-size: 0; height: 0; visibility: hidden; }
@@ -169,18 +203,11 @@ a { color: #333; line-height: 12px; font-size: 12px; background: transparent; te
             .register-box .register-foot a:hover { text-decoration: underline; }
 
 /*account-form*/
-.account-form { }
-    .account-form .form-title { display: inline-block; width: 100%; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 2px solid #d8d8d8; text-align: left; font-size: 24px; }
-        .account-form .form-title h3 { color: #14191e; font-size: 24px; line-height: 24px; }
-    .account-form .form-item { width: 100%; margin-bottom: 16px; clear: both; }
-    .account-form .form-input { width: 100%; height: 40px; padding: 0 10px; vertical-align: middle; background: #fff; border: 1px solid #d7d8d9; box-shadow: none; }
-        .account-form .form-input input[type="text"], .account-form .form-input input[type="password"] { display: block; width: 100%; line-height: 36px; box-sizing: border-box; outline: 0; font-size: 12px; }
-        .account-form .form-input:focus, .account-form .form-input:hover { border-color: #009191; }
-            .account-form .form-input:focus input, .account-form .form-textarea:focus input { -webkit-box-shadow: 0 0 2px #a6cfff; -moz-box-shadow: 0 0 2px #a6cfff; -ms-box-shadow: 0 0 2px #a6cfff; -o-box-shadow: 0 0 2px #a6cfff; box-shadow: 0 0 2px #a6cfff; }
-    .account-form .form-submit { width: 100%; height: 40px; padding: 0 10px; margin: 0px auto; vertical-align: middle; background: #009191; border-color: #009191; color: #fff; cursor: pointer; }
-        .account-form .form-submit:hover { background: #0c7979; }
-    .account-form .form-submit-disable, .account-form .form-submit-disable:hover { cursor: default; background: #8ed7d7; }
-    .account-form .form-des { width: 100%; margin-bottom: 16px; clear: both; }
+.account-form .form-input-sms { width: 213px; margin-right: 5px; }
+.account-form .form-btn-get-sms { width: 100px; }
+
+.account-form .form-button { cursor: pointer; color: #009191; border-radius: 2px; }
+    .account-form .form-button:focus, .account-form .form-button:hover { color: #0c7979; border-color: #009191; }
 
 
 
