@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Template", "Template", "{5E8B5E8F-C353-4AEC-91BE-E7F4DF5C4D50}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "User01(1)", "Template\User01\", "{590B35C2-3086-4F5C-886E-2C3EFBD1FDC2}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "User01", "Template\User01\", "{590B35C2-3086-4F5C-886E-2C3EFBD1FDC2}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.7"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_60388"
@@ -71,14 +71,21 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{590B35C2-3086-4F5C-886E-2C3EFBD1FDC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{590B35C2-3086-4F5C-886E-2C3EFBD1FDC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{590B35C2-3086-4F5C-886E-2C3EFBD1FDC2}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{590B35C2-3086-4F5C-886E-2C3EFBD1FDC2}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{4C74E090-43F0-4F5E-A356-F8304CAE346B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4C74E090-43F0-4F5E-A356-F8304CAE346B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C74E090-43F0-4F5E-A356-F8304CAE346B}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C74E090-43F0-4F5E-A356-F8304CAE346B}.Release|Any CPU.Build.0 = Debug|Any CPU
 		{09A0DEB5-C986-4443-955B-F073D9D5CDEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{09A0DEB5-C986-4443-955B-F073D9D5CDEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A0DEB5-C986-4443-955B-F073D9D5CDEA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A0DEB5-C986-4443-955B-F073D9D5CDEA}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
