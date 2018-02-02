@@ -115,6 +115,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Example", "Webpack\Example\
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "52224"
+		SlnRelativePath = "Webpack\Example\"
 	EndProjectSection
 EndProject
 Global
