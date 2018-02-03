@@ -1,0 +1,16 @@
+{
+  "name": "Example",
+  "version": "1.0.0",
+  "description": "> 说明： 该示例为一个基础的webapck演示",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
+}
