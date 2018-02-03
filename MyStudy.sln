@@ -76,7 +76,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaticFiles", "NetCore\Stat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Webpack", "Webpack", "{E1F799C7-E136-4865-8E62-92D7326DD6FA}"
 	ProjectSection(SolutionItems) = preProject
-		Webpack\说明.txt = Webpack\说明.txt
+		Webpack\重要说明.txt = Webpack\重要说明.txt
 	EndProjectSection
 EndProject
 Global
