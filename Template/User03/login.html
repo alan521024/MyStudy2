@@ -7,54 +7,107 @@
     <meta name="application-name" content="Login Title" />
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <title>登录-网商银行</title>
+    <title>登录-网易帐号中心</title>
     <link type="text/css" rel="stylesheet" href="icon/iconfont.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
-<body class="accoung-body">
-    <div class="container shadow4 head account-head">
-        <div class="wrapper wrapper-auto clearfix">
-            <div class="left logo">
-                <h1><a href="javascript:;"><img src="images/logo-account.png" class="logo-img" /></a></h1>
-            </div>
-            <div class="right menu">
-                <ul>
-                    <li><a href="javascript:;"><i class="iconfont d-icon-flow2"></i>&nbsp;服务大厅</a></li>
-                    <li><a href="javascript:;"><i class="iconfont d-icon-phone3"></i>&nbsp;95188-3</a></li>
-                    <li><a href="javascript:;"><i class="iconfont d-icon-helper1"></i>&nbsp;[帮助中心]</a></li>
-                </ul>
+<body class="login-body">
+    <div id="app" class="login-box">
+        <div class="login-top shadow3 clearfix">
+            <div class="wrapper clearfix">
+                <h1 class="left"><a href="javascript:;"><img src="images/logo-a.png" /></a></h1>
+                <i class="left">|</i>
+                <h2 class="left">登录</h2>
             </div>
         </div>
-    </div>
-    <div class="account-bg">
-        <img src="images/account-bg.png" />
-    </div>
-    <div class="container account-login">
-        <div class="wrapper">
-            <iframe src="login-part.html" class="accoung-login-frame"></iframe>
-        </div>
-    </div>
-    <div class="container foot account-foot">
-        <div class="wrapper foot-content clearfix">
-            <div class="left">
-                <img class="foot-tag-img1" src="images/copyright-tag1.png" />
-                <div class="foot-link">
-                    <a href="http://www.antgroup.com/page/alipay.htm" target="_blank" title="支付宝">支付宝</a> |
-                    <a href="http://www.antgroup.com/page/zmxy.htm" target="_blank" title="芝麻信用">芝麻信用</a> |
-                    <a href="http://www.antgroup.com/page/jinrongyun.htm" target="_blank" title="蚂蚁金融云">蚂蚁金融云</a> |
-                    <a href="http://www.antgroup.com/page/yuebao.htm" target="_blank" title="余额宝">余额宝</a>
+        <div class="login-mid">
+            <div class="wrapper login-main">
+                <div class="login-banner">
+                    <a href="javascript:;"><img src="images/login-banner2.png" /></a>
+                </div>
+                <div class="login-form">
+                    <div class="login-form-title">
+                        <ul class="login-form-title-tabs">
+                            <li class="active" @click="setBox()"><a href="javascript:;">普通登录</a></li>
+                            <li><a href="javascript:;">二维码登录</a></li>
+                        </ul>
+                    </div>
+                    <div class="login-form-box">
+                        <form id="login-form">
+                            <div class="login-form-group login-from-input">
+
+                            </div>
+                            <div class="login-form-tip">
+
+                            </div>
+                            <div class="login-form-group login-from-input">
+
+                            </div>
+                            <div class="login-form-tip">
+
+                            </div>
+                            <div class="login-form-group login-from-input">
+
+                            </div>
+                            <div class="login-form-des">
+
+                            </div>
+                            <div class="login-form-group">
+                                <a href="javascript:;" class="login-from-btn  <!--login-from-btn-disable-->">登  录</a>
+                            </div>
+                            <div class="login-form-des">
+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="login-annouce">
+                        <img src="images/slide.png" />
+                        <a href="javascript:;" class="annouce-msg">公告：网易邮箱帐号升级公告</a>
+                    </div>
                 </div>
             </div>
-            <div class="right">
-                <div class="foot-intro">
-                    <a href="https://www.mybank.cn/about.htm" target="_blank" title="关于我们">关于我们</a> |
-                    <a href="https://job.alibaba.com/zhaopin/index.htm" target="_blank" title="诚招英才">诚招英才</a>
-                </div>
-                <p class="foot-copyright">
-                    <span class="copyright">浙ICP备15020822号</span>Copyright © 2015-2017 浙江网商银行
-                </p>
+        </div>
+        <div class="login-footer container">
+            <div class="wrapper">
+                <p><a href="http://corp.163.com/eng/about/overview.html" target="_blank">About NetEase</a>-<a href="http://gb.corp.163.com/gb/about/overview.html" target="_blank">公司简介</a>-<a href="http://gb.corp.163.com/gb/contactus.html" target="_blank">联系方式</a>-<a href="http://reg.163.com/help/help_oauth2.html?v=20141215" target="_blank">OAuth2.0认证</a>-<a href="http://corp.163.com/gb/job/job.html" target="_blank">招聘信息</a>-<a href="http://help.163.com/" target="_blank">客户服务</a>-<a href="http://gb.corp.163.com/gb/legal.html" target="_blank">相关法律</a>-<a href="http://emarketing.biz.163.com/" target="_blank">网络营销</a></p>
+                <p>网易公司版权所有 ©1997-2018</p>
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="lib/vue/vue.js"></script>
+    <script type="text/javascript">
+        var app = new Vue({
+            el: "#app",
+            methods: {
+                init: function () {
+
+                },
+                resize: function () {
+                    let $body = document.querySelector("body");
+                    if ($body.clientHeight - this.$el.clientHeight > 50) {
+                        let bodyPaddingTop = ($body.clientHeight - this.$el.clientHeight) / 2;
+                        if (bodyPaddingTop > 80) { bodyPaddingTop = 80; }
+                        $body.style.paddingTop = bodyPaddingTop + "px";
+                    } else {
+                        $body.style.paddingTop = "0px";
+                    }
+                },
+                setBox: function () {
+                    alert('1');
+                }
+            },
+            mounted: function () {
+                this.$nextTick(() => {
+                    let that = this;
+                    this.resize();
+                    window.onresize = () => {
+                        return (() => {
+                            that.resize();
+                        })()
+                    };
+                })
+            }
+        })
+    </script>
 </body>
 </html>

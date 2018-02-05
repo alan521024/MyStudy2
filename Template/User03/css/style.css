@@ -8,11 +8,8 @@ ico16, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td { color: #666; font-size: 12px; font-family: "微软雅黑","Helvetica Neue", Helvetica, Arial, sans-serif; text-decoration: none; }
+table, caption, tbody, tfoot, thead, tr, th, td { font-size: 12px; font-family: "微软雅黑","Helvetica Neue", Helvetica, Arial, sans-serif; text-decoration: none; }
 /*"微软雅黑","宋体",Arial,sans-serif*/
-
-/*self-cst*/
-html, body { width: 100%; height: 100%; /*overflow: hidden;*/ }
 
 a { text-decoration: none; }
 table { border-collapse: collapse; border-spacing: 0; }
@@ -20,25 +17,12 @@ ol, ul, li { list-style: none; }
 image { border: none; }
 img.img-view { max-width: 100%; max-height: 100%; }
 
+/*self-cst*/
+html, body { width: 100%; height: 100%; overflow: hidden; }
 
-a { color: #333; line-height: 12px; font-size: 12px; background: transparent; text-decoration: none; outline: none; cursor: pointer; transition: color .3s ease; }
-    a:hover { color: #00c2c2; }
-    a:active, a:hover { outline: 0; text-decoration: none; }
-    a .iconfont { color: #333; }
-    a:hover .iconfont { color: #00c2c2; }
-
-
-.link-text { color: #666; text-decoration: none; }
-    .link-text:hover { color: #333; }
-
-.label-text { color: #333; }
-
-.iconfont { font-size: 14px; }
-
-/*clearfix*/
+/** clearfix **/
 .clearfix:after { content: ''; display: table; clear: both; /*height: 0;  overflow:hidden;*/ }
 .clearfix { *zoom: 1; }
-
 
 /*flow*/
 .left { float: left; }
@@ -47,30 +31,8 @@ a { color: #333; line-height: 12px; font-size: 12px; background: transparent; te
 /*package*/
 .full { position: relative; width: 100%; height: 100%; }
 .container { position: relative; width: 100%; }
-.wrapper { position: relative; width: 1190px; margin: 0px auto; height: inherit; }
-.wrapper-auto { width: auto; padding: 0 15px; }
+.wrapper { position: relative; width: 1025px; margin: 0px auto; height: inherit; }
 .overflow-hide { overflow: hidden; }
-
-/*shadow*/
-.shadow1 { -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); }
-.shadow2 { -webkit-box-shadow: 0px 1px 2px #bbb; -moz-box-shadow: 0px 1px 2px #bbb; box-shadow: 0px 1px 2px #bbb; }
-.shadow3 { -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.06); -moz-box-shadow: 0 3px 3px rgba(0,0,0,0.06); box-shadow: 0 3px 3px rgba(0,0,0,0.06); }
-.shadow4 { -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.1); -moz-box-shadow: 0 2px 4px rgba(0,0,0,.1); box-shadow: 0 2px 4px rgba(0,0,0,.1); }
-
-/*badge*/
-.badge, .badge-dot, .badge-rim { position: relative; display: inline-block; padding: 0 6px; font-style: normal; font-size: 12px; text-align: center; background-color: #FF5722; color: #fff; border-radius: 2px; }
-.badge { height: 18px; line-height: 18px; }
-.badge-dot { width: 8px; height: 8px; padding: 0; border-radius: 50%; }
-.badge-rim { height: 18px; line-height: 18px; border-width: 1px; border-style: solid; background-color: #fff; color: #666; }
-
-/*backgroup*/
-.bg-red { background-color: #ff5722 !important }
-.bg-orange { background-color: #ffb800 !important }
-.bg-green { background-color: #009688 !important }
-.bg-cyan { background-color: #2f4056 !important }
-.bg-blue { background-color: #1e9fff !important }
-.bg-black { background-color: #393d49 !important }
-.bg-gray { background-color: #eee !important; }
 
 /*validation-danger*/
 .validation-summary-errors { }
@@ -78,10 +40,10 @@ a { color: #333; line-height: 12px; font-size: 12px; background: transparent; te
         .validation-summary-errors ul li { }
 .validation-model-danger ul li { color: #f00; }
 
-/*captcha*/
-.captcha-code { font-family: "iconfont" !important; font-size: 16px; font-style: normal; cursor:pointer; }
-    .captcha-code:before { width: 40px; line-height: 36px; content: "\e612"; text-align: center; left: 0px; }
-    .captcha-code span { padding-left:15px; padding-left:8px;}
+/*shadow*/
+.shadow1 { -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); }
+.shadow2 { -webkit-box-shadow: 0px 1px 2px #bbb; -moz-box-shadow: 0px 1px 2px #bbb; box-shadow: 0px 1px 2px #bbb; }
+.shadow3 { -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.06); -moz-box-shadow: 0 3px 3px rgba(0,0,0,0.06); box-shadow: 0 3px 3px rgba(0,0,0,0.06); }
 
 /*box*/
 .box { border: 1px solid #ddd; }
@@ -93,170 +55,103 @@ a { color: #333; line-height: 12px; font-size: 12px; background: transparent; te
     .box-theme1 .box-title { padding: 10px 15px; border-bottom: 1px solid #eee; background: #f8fafc; box-shadow: none; font-size: 0; color: #666; }
     .box-theme1 .box-inner { padding: 15px; }
 
-/*form-group*/
-.form-group { }
-    .form-group .form-item { width: 100%; margin-bottom: 16px; clear: both; }
-    .form-group .form-input, .form-group .captcha-code { width: 100%; height: 40px; padding: 0 10px; vertical-align: middle; background: #fff; border: 1px solid #d7d8d9; box-shadow: none; border-radius: 2px; }
-        .form-group .form-input input[type="text"], .form-group .form-input input[type="password"] { display: block; width: 100%; line-height: 36px; box-sizing: border-box; outline: 0; font-size: 12px; }
-        .form-group .form-input:focus, .form-group .form-input:hover { border-color: #009191; }
-            .form-group .form-input:focus input, .form-group .form-textarea:focus input { -webkit-box-shadow: 0 0 2px #a6cfff; -moz-box-shadow: 0 0 2px #a6cfff; -ms-box-shadow: 0 0 2px #a6cfff; -o-box-shadow: 0 0 2px #a6cfff; box-shadow: 0 0 2px #a6cfff; }
-    .form-group .form-submit { width: 100%; height: 40px; padding: 0 10px; margin: 0px auto; vertical-align: middle; background: #009191; border-color: #009191; color: #fff; cursor: pointer; }
-        .form-group .form-submit:hover { background: #0c7979; }
-    .form-group .form-submit-disable, .form-group .form-submit-disable:hover { cursor: default; background: #8ed7d7; }
-    .form-group .form-des { width: 100%; margin-bottom: 16px; clear: both; }
+/*徽章*/
+.badge, .badge-dot, .badge-rim { position: relative; display: inline-block; padding: 0 6px; font-style: normal; font-size: 12px; text-align: center; background-color: #FF5722; color: #fff; border-radius: 2px; }
+.badge { height: 18px; line-height: 18px; }
+.badge-dot { width: 8px; height: 8px; padding: 0; border-radius: 50%; }
+.badge-rim { height: 18px; line-height: 18px; border-width: 1px; border-style: solid; background-color: #fff; color: #666; }
 
-    .form-group .form-input-icon { position: relative; font-family: "iconfont" !important; font-size: 16px; font-style: normal; padding-left: 40px; }
-        .form-group .form-input-icon:before { position: absolute; width: 40px; line-height: 36px; text-align: center; left: -2px; }
-    .form-group .form-input-user:before { content: "\e63c"; }
-    .form-group .form-input-password:before { content: "\e69b"; }
-    .form-group .form-input-sms:before { content: "\e772"; }
-    .form-group .form-input-email:before { content: "\e660"; }
-    .form-group .form-input-captcha:before { content: "\e612"; }
+/**
+    login
+*/
+.login-body { }
+.login-box { background: #39a6ec; }
+    .login-box .login-top { height: 50px; line-height: 50px; background: #fff; overflow: hidden; }
+        .login-box .login-top h1, .login-box .login-top i, .login-box .login-top h2 { }
+        .login-box .login-top i { width: 1px; height: 26px; overflow: hidden; margin: 12px 20px 0 20px; text-indent: -9999px; background: #dfdfdf; }
+        .login-box .login-top h2 { font-size: 24px; font-weight: normal; }
 
-    .form-group .form-input-sms { width: 213px; margin-right: 5px; }
-    .form-group .form-btn-get-sms { width: 100px; }
+    .login-box .login-mid { }
+        .login-box .login-mid .login-main { padding: 46px 0; overflow: hidden; }
+            .login-box .login-mid .login-main .login-banner { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; min-height: 512px; overflow: hidden; }
+            .login-box .login-mid .login-main .login-form { position: relative; width: 450px; left: 100%; margin-left: -450px; }
 
-    .form-group .form-button { cursor: pointer; color: #009191; border-radius: 2px; }
-        .form-group .form-button:focus, .form-group .form-button:hover { color: #0c7979; border-color: #009191; }
+    .login-box .login-form .login-form-title { height: 50px; }
+        .login-box .login-form .login-form-title .login-form-title-tabs { }
+            .login-box .login-form .login-form-title .login-form-title-tabs li { position: relative; float: left; width: 224px; height: 49px; margin: 0 1px 1px 0; overflow: hidden; }
+                .login-box .login-form .login-form-title .login-form-title-tabs li a { display: block; width: 100%; line-height: 47px; padding-top: 3px; text-align: center; font-family: "Microsoft YaHei",微软雅黑,arial,宋体; font-size: 22px; color: #323232; background: rgba(255,255,255,0.40); }
+                .login-box .login-form .login-form-title .login-form-title-tabs li::after { display: block; clear: both; visibility: hidden; height: 0; overflow: hidden; content: "."; }
+                .login-box .login-form .login-form-title .login-form-title-tabs li.active { margin-bottom: 0px; height: 50px; }
+                    .login-box .login-form .login-form-title .login-form-title-tabs li.active a { background: rgba(255,255,255,0.85); }
 
-    .form-group .captcha-code {}
+    .login-box .login-form .login-form-box { padding: 35px 50px 30px 50px; background: rgba(255,255,255,0.85); }
+        .login-box .login-form .login-form-box .login-form-group { position: relative; height: 44px; line-height: 44px; margin-bottom: 0px; }
+        .login-box .login-form .login-form-box .login-form-tip { width: 100%; height: 16px; line-height: 16px; font-size: 12px; }
+        .login-box .login-form .login-form-box .login-form-des { width: 100%; height: 16px; line-height: 16px; font-size: 12px; margin-top: 16px; }
+        .login-box .login-form .login-form-box .login-from-input { border: 1px solid #c5cddb; background: #fff; font-size: 12px; }
+        .login-box .login-form .login-form-box .login-from-btn { display: block; width: 100%; height: 100%; text-align: center; margin-top: 16px; margin-bottom: 12px; font-size: 20px; background: #52b0fc; color: #fff; }
+            .login-box .login-form .login-form-box .login-from-btn:hover { background: #69bbfc }
+        .login-box .login-form .login-form-box .login-from-btn-disable, .login-box .login-form .login-form-box .login-from-btn-disable:hover { background: #79b1d5; color: #c8dfed; cursor: default; }
+    .login-box .login-form .login-annouce { height: 44px; overflow: hidden; background: rgba(255,255,255,0.85); }
+        .login-box .login-form .login-annouce .annouce-msg { position: relative; top: -8px; padding-left: 50px; font-size: 13px; color: red; }
+    .login-box .login-footer { padding: 30px 0px; background: #fff; }
+        .login-box .login-footer p { padding-bottom: 10px; text-align: center; color: #949494;}
+        .login-box .login-footer p a{ padding: 0 6px; color: #949494; }
+/**
+ *  user css
+ */
+.user-body { background: #eee; }
+    .user-body, .user-body a:link, .user-body a:visited { color: #14191e; }
 
+.header-bg { background: url(../images/header-bg.png) repeat-x; }
 
-/*cmpt-step*/
-.cmpt-step:after { clear: both; content: " "; display: block; font-size: 0; height: 0; visibility: hidden; }
-.cmpt-step { color: #B7B7B7; font-size: 12px; list-style: none outside none; overflow: hidden; position: relative; }
-    .cmpt-step li { float: left; height: 54px; margin: 0; position: relative; }
-.cmpt-step-2 li { width: 49%; }
-.cmpt-step-3 li { width: 33%; }
-.cmpt-step-4 li { width: 24%; }
-.cmpt-step-5 li { width: 19%; }
-.cmpt-step-6 li { width: 16%; }
-.cmpt-step li { float: left; text-align: center; }
-.cmpt-step .cmpt-step-active .left { background: #fa7200 url(../images/step-progress.png) -20px -66px no-repeat; width: 6px; height: 5px; float: left; position: relative; z-index: 10; overflow: hidden; }
-.cmpt-step .cmpt-step-inactive .left { background: #cccccc url(../images/step-progress.png) -20px -73px no-repeat; width: 6px; height: 5px; float: left; position: relative; z-index: 10; overflow: hidden; }
-.cmpt-step .cmpt-step-active .right { background: #fa7200 url(../images/step-progress.png) -7px -66px no-repeat; width: 6px; height: 5px; float: right; position: absolute; z-index: 10; right: 0; overflow: hidden; }
-.cmpt-step .cmpt-step-inactive .right { background: #cccccc url(../images/step-progress.png) -7px -73px no-repeat; width: 6px; height: 5px; float: right; position: absolute; z-index: 10; right: 0; overflow: hidden; }
-.cmpt-step .cmpt-step-active .all { background-color: #fa7200; height: 5px; margin: auto 5px; position: relative; z-index: 9; _margin: 0; overflow: hidden; _left: -3px; }
-.cmpt-step .cmpt-step-inactive .all { background-color: #cccccc; height: 5px; margin: auto 5px; position: relative; z-index: 9; _margin: 0; overflow: hidden; _left: -3px; }
+.header { padding: 14px 0px; }
+    .header .logo { width: 153px; }
+    .header .menu { }
+        .header .menu .item { margin: 0 5px 0 10px; }
+            .header .menu .item a { line-height: 28px; color: #fff; font-size: 14px; }
+                .header .menu .item a:hover { color: rgba(255,255,255,0.8); }
+                .header .menu .item a .badge { height: 14px; line-height: 14px; }
 
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    .cmpt-step .cmpt-step-active .all { background-color: #fa7200; height: 5px; margin: auto 5px auto 0; position: relative; z-index: 9; overflow: hidden; }
-    .cmpt-step .cmpt-step-inactive .all { background-color: #cccccc; height: 5px; margin: auto 5px auto 0; position: relative; z-index: 9; overflow: hidden; }
-}
+.main { margin-top: 10px; }
+    .main .slider { width: 216px; background: #f8fafc; }
+        .main .slider .profile { padding: 32px 0 24px; }
+            .main .slider .profile .avator { position: relative; width: 100px; height: 100px; box-sizing: border-box; border: 4px solid #d9dde1; border-radius: 50px; margin: 0 auto; text-align: center; overflow: hidden; }
+                .main .slider .profile .avator .avator-img { width: 92px; height: 92px; }
+            .main .slider .profile .descript { width: 160px; line-height: 44px; margin: 0 auto; overflow: hidden; }
+            .main .slider .profile .descript { font-size: 16px; text-align: center; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+            .main .slider .profile .tag { text-align: center; }
+                .main .slider .profile .tag dd { display: inline-block; position: relative; background-color: #fff; width: 26px; height: 26px; border-radius: 13px; box-sizing: border-box; padding-top: 2.5px; margin-right: 12px; color: #a9adb2; cursor: pointer; }
+                    .main .slider .profile .tag dd.active { color: #f01414; }
+                        .main .slider .profile .tag dd.active:hover { color: #dd0909 }
+                    .main .slider .profile .tag dd:hover { color: #666; }
 
-.cmpt-step .cmpt-step-active .step-no { background: url(../images/step-progress.png) -2px -1px no-repeat; width: 30px; height: 30px; color: #FFFFFF; z-index: 99; position: absolute; left: 50%; margin-top: -25px; padding-top: 5px; margin-left: -15px; font-size: 14px; *height: 24px; *padding-top: 6px; }
-.cmpt-step .cmpt-step-inactive .step-no { background: url(../images/step-progress.png) -2px -32px no-repeat; width: 30px; height: 30px; color: #FFFFFF; z-index: 99; position: absolute; left: 50%; margin-top: -25px; padding-top: 5px; margin-left: -15px; font-size: 14px; *height: 24px; *padding-top: 6px; }
-.cmpt-step .start .left, .cmpt-step .end .right { background-color: transparent; }
-.cmpt-step .step-name { color: #888888; font-weight: 700; margin-top: 5px; }
-.cmpt-step .step-back { padding-top: 12px; padding-bottom: 13px; z-index: -1; height: 5px; _height: 0; }
+        .main .slider .slider-title { font-size: 16px; line-height: 24px; margin: 12px 24px; font-weight: 700; }
+        .main .slider .slider-line { height: 1px; background-color: #d9dde1; margin: 0 24px; }
 
-/*head*/
-.head { height: 70px; line-height: 70px; background: #fff; }
-    .head .logo { }
-        .head .logo h1 { line-height: initial; }
-        .head .logo .logo-img { margin-top: 20px; width: 169px; height: 30px; }
-    .head .menu { }
-        .head .menu li { float: left; }
-        .head .menu a { padding: 0px 10px; }
-
-/*foot*/
-.foot { font-size: 12px; line-height: 12px; color: #333; }
-    .foot a { color: #333; text-decoration: none; font-size: 12px; margin: 0 10px; }
-    .foot .right { text-align: right; }
-    .foot .foot-content { padding: 30px 15px; background: #f8f8f8 url(/images/copyright-bg.png) right -1px no-repeat; }
-    .foot .foot-tag-img1 { height: 26px; }
-    .foot .foot-link { position: relative; left: -10px; padding-top: 18px; line-height: 12px; }
-    .foot .foot-intro { padding-top: 14px; position: relative; right: -10px; }
-    .foot .foot-copyright { padding-top: 20px; }
-
-/*login*/
-.login-min { width: 380px; margin: 0 auto; min-height: 442px; background: #fff; }
-.login-box { position: relative; }
-    .login-box .login-nav, .login-box .login-form, .login-box .login-foot { width: 320px; margin: 0px auto; }
-
-    .login-box .login-nav { margin-bottom: 28px; }
-        .login-box .login-nav .login-tab { display: table; width: 100%; height: 49px; line-height: 49px; font-size: 16px; color: #909090; padding-top: 38px; font-weight: 600; overflow: hidden; }
-            .login-box .login-nav .login-tab span { display: table-cell; width: 50%; color: #dcdcdc; font-size: 14px; text-align: center; border-bottom: 1px solid #e7e7e7; cursor: pointer; }
-                .login-box .login-nav .login-tab span.active { color: #464646 !important; border-bottom: 3px solid #009191 !important; }
-
-    .login-box .login-form { }
-
-    .login-box .login-foot { }
-        .login-box .login-foot .login-link { }
-        .login-box .login-foot .login-platform { margin-top: 15px; }
-            .login-box .login-foot .login-platform a { color: #666; }
-
-/*register*/
-.register-min { width: 380px; margin: 0 auto; min-height: 442px; background: #fff; }
-.register-box { position: relative; }
-    .register-box .register-nav, .register-box .register-form, .register-box .register-foot { width: 320px; margin: 0px auto; }
-
-    .register-box .register-nav { margin-bottom: 20px; }
-        .register-box .register-nav span { display: block; text-align: center; height: 52px; line-height: 52px; font-weight: 600; border-bottom: 1px solid #e7e7e7; font-size: 16px; color: #464646; }
-
-    .register-box .register-form { }
-
-        .register-box .register-form .des-center { width: 100%; display: inline-block; text-align: center; }
-
-    .register-box .register-foot { text-align: center; }
-        .register-box .register-foot a { padding: 10px 0px 5px 0px; color: #009191; font-size: 14px; }
-            .register-box .register-foot a:hover { text-decoration: underline; }
-
-/*account-form*/
-.account-form .form-input-sms { width: 213px; margin-right: 5px; }
-.account-form .form-btn-get-sms { width: 100px; }
-
-.account-form .form-button { cursor: pointer; color: #009191; border-radius: 2px; }
-    .account-form .form-button:focus, .account-form .form-button:hover { color: #0c7979; border-color: #009191; }
+        .main .slider .nav { padding: 10px 0 25px; }
+            .main .slider .nav li { }
+                .main .slider .nav li a { display: block; position: relative; height: 48px; line-height: 48px; padding: 0 0 0 54px; transition: background-color .3s ease; }
+                    .main .slider .nav li a span.arr { position: absolute; top: 0px; right: 25px; }
+                    .main .slider .nav li a:hover { background-color: #f3f5f7; color: #f01414; }
+                    .main .slider .nav li a.active { color: #fff; background-color: #f01414; }
 
 
-
-/*account-layout[login/register]*/
-.accoung-body { background: #ecf1f1; }
-.account-bg { width: 100%; height: 100%; overflow-x: hidden; position: relative; background-color: #ecf1f1; }
-    .account-bg img { position: absolute; left: 50%; margin-left: -960px; }
-
-.account-head { position: fixed; top: 0; z-index: 99; }
-
-.account-foot { position: fixed; bottom: 0; height: 120px; z-index: 99; background: #f8f8f8; }
-
-.account-login { position: fixed; top: 120px; }
-    .account-login .accoung-login-frame { position: relative; width: 380px; height: 464px; left: 100%; padding: 0px; margin: 0px; padding-top: 22px; margin-left: -380px; border: none; background: transparent; }
-
-.account-main { position: relative; padding-top: 85px; padding-bottom: 135px; }
-    .account-main .account-main-inner { padding: 100px 0; background: #fff; border-radius: 3px; }
-
-.account-box { width: 50%; margin: 0 auto; }
-    .account-box .account-box-title { }
-    .account-box .account-form { width: 400px; margin: 0 auto; }
-
-/*layout*/
-.layout-body { background: #ecf1f1; }
-.layout-main { margin: 10px 0; background: #f8f8f8; border-radius: 3px; }
-    .layout-main .slider { width: 216px; margin-left: 15px; }
-    .layout-main .content { width: 876px; margin-left: 48px; margin-right: 15px; padding: 30px 0; }
-
-.slider .profile { padding: 32px 0 24px; }
-    .slider .profile .avator { position: relative; width: 100px; height: 100px; box-sizing: border-box; border: 4px solid #d9dde1; border-radius: 50px; margin: 0 auto; text-align: center; overflow: hidden; }
-        .slider .profile .avator .avator-img { width: 92px; height: 92px; }
-    .slider .profile .descript { width: 160px; line-height: 44px; margin: 0 auto; overflow: hidden; }
-    .slider .profile .descript { font-size: 16px; text-align: center; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
-    .slider .profile .tag { text-align: center; }
-        .slider .profile .tag dd { display: inline-block; position: relative; background-color: #fff; width: 26px; height: 26px; border-radius: 13px; box-sizing: border-box; padding-top: 2.5px; margin-right: 12px; color: #a9adb2; cursor: pointer; }
-            .slider .profile .tag dd.active { color: #f01414; }
-                .slider .profile .tag dd.active:hover { color: #dd0909 }
-            .slider .profile .tag dd:hover { color: #666; }
-
-.slider .slider-title { font-size: 16px; line-height: 24px; margin: 12px 24px; font-weight: 700; }
-.slider .slider-line { height: 1px; background-color: #d9dde1; margin: 0 24px; }
-
-.slider .nav { padding: 10px 0 25px; }
-    .slider .nav li { }
-        .slider .nav li a { display: block; position: relative; height: 48px; line-height: 48px; padding: 0 0 0 54px; transition: background-color .3s ease; }
-            .slider .nav li a span.arr { position: absolute; top: 0px; right: 25px; }
-            .slider .nav li a:hover, .slider .nav li a:hover .iconfont { background-color: #f3f5f7; color: #f01414; }
-            .slider .nav li a.active, .slider .nav li a.active .iconfont { color: #fff; background-color: #f01414; }
+    .main .content { width: 800px; }
+        .main .content .crumbs { background: #fff; padding: 10px 0px 15px; margin-bottom: 10px; }
+            .main .content .crumbs .crumbs-path { line-height: 32px; padding: 0px 15px; color: #666; }
+                .main .content .crumbs .crumbs-path a, .main .content .crumbs .crumbs-path i.iconfont, .main .content .crumbs .crumbs-path span { font-size: 14px; }
+            .main .content .crumbs .crumbs-sub { padding: 0px 15px; }
+                .main .content .crumbs .crumbs-sub ul li { float: left; margin-right: 15px; }
+                    .main .content .crumbs .crumbs-sub ul li a { line-height: 28px; }
+                        .main .content .crumbs .crumbs-sub ul li a:hover, .main .content .crumbs .crumbs-sub ul li a.active { color: #f01414; }
 
 
-.content .content-title { line-height: 40px; border-bottom: 1px solid #d0d6d9; padding-bottom: 12px; }
-    .content .content-title h2 { font-size: 16px; font-weight: 700; }
+/*backgroup*/
+.bg-red { background-color: #FF5722 !important }
+.bg-orange { background-color: #FFB800 !important }
+.bg-green { background-color: #009688 !important }
+.bg-cyan { background-color: #2F4056 !important }
+.bg-blue { background-color: #1E9FFF !important }
+.bg-black { background-color: #393D49 !important }
+.bg-gray { background-color: #eee !important; color: #666 !important }

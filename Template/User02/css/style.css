@@ -43,7 +43,6 @@ html, body { width: 100%; height: 100%; overflow: hidden; }
 /*shadow*/
 .shadow1 { -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); }
 .shadow2 { -webkit-box-shadow: 0px 1px 2px #bbb; -moz-box-shadow: 0px 1px 2px #bbb; box-shadow: 0px 1px 2px #bbb; }
-.shadow3 { -webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.06); -moz-box-shadow: 0 3px 3px rgba(0,0,0,0.06); box-shadow: 0 3px 3px rgba(0,0,0,0.06); }
 
 /*box*/
 .box { border: 1px solid #ddd; }
@@ -62,41 +61,22 @@ html, body { width: 100%; height: 100%; overflow: hidden; }
 .badge-rim { height: 18px; line-height: 18px; border-width: 1px; border-style: solid; background-color: #fff; color: #666; }
 
 /**
-    login
-*/
-.login-body { }
-.login-box { background: #39a6ec; }
-    .login-box .login-top { height: 50px; line-height: 50px; background: #fff; overflow: hidden; }
-        .login-box .login-top h1, .login-box .login-top i, .login-box .login-top h2 { }
-        .login-box .login-top i { width: 1px; height: 26px; overflow: hidden; margin: 12px 20px 0 20px; text-indent: -9999px; background: #dfdfdf; }
-        .login-box .login-top h2 { font-size: 24px; font-weight: normal; }
+ * account login/register css
+ */
+.account-bg { min-height: 500px; background: url(../images/body-bg.jpg) repeat-x; }
+.account-box { width: 480px; margin: 100px auto 0; background: #fff; background-color: #fff; -webkit-box-shadow: 0 2px 16px rgba(0, 0, 0, .12); -moz-box-shadow: 0 2px 16px rgba(0, 0, 0, .12); box-shadow: 0 2px 16px rgba(0, 0, 0, .12); }
 
-    .login-box .login-mid { }
-        .login-box .login-mid .login-main { padding: 46px 0; overflow: hidden; }
-            .login-box .login-mid .login-main .login-banner { position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; min-height: 512px; overflow: hidden; }
-            .login-box .login-mid .login-main .login-form { position: relative; width: 450px; left: 100%; margin-left: -450px; }
+    .account-box .account-title { padding: 35px 0 0; font-size: 24px; color: #1E9FFF; text-align: center; }
+    .account-box .account-form { padding: 35px 0 0; }
+        .account-box .account-form a { color: #1E9FFF; }
+            .account-box .account-form a:hover { text-decoration: underline; }
+        .account-box .account-form .account-form-item { width: 360px; margin: 0 auto 20px auto; }
+        .account-box .account-form .submit-item { margin-bottom: 35px; }
+            .account-box .account-form .submit-item button { width: 100%; }
+    .account-box .account-descript { width: 360px; margin: 0 auto; padding: 25px 0; border-top: 1px solid #ddd; }
+        .account-box .account-descript p { line-height: 30px; font-size: 14px; color: #666; }
+    .account-box .account-validation-summary { padding: 15px 0px; }
 
-    .login-box .login-form .login-form-title { height: 50px; }
-        .login-box .login-form .login-form-title .login-form-title-tabs { }
-            .login-box .login-form .login-form-title .login-form-title-tabs li { position: relative; float: left; width: 224px; height: 49px; margin: 0 1px 1px 0; overflow: hidden; }
-                .login-box .login-form .login-form-title .login-form-title-tabs li a { display: block; width: 100%; line-height: 47px; padding-top: 3px; text-align: center; font-family: "Microsoft YaHei",微软雅黑,arial,宋体; font-size: 22px; color: #323232; background: rgba(255,255,255,0.40); }
-                .login-box .login-form .login-form-title .login-form-title-tabs li::after { display: block; clear: both; visibility: hidden; height: 0; overflow: hidden; content: "."; }
-                .login-box .login-form .login-form-title .login-form-title-tabs li.active { margin-bottom: 0px; height: 50px; }
-                    .login-box .login-form .login-form-title .login-form-title-tabs li.active a { background: rgba(255,255,255,0.85); }
-
-    .login-box .login-form .login-form-box { padding: 35px 50px 30px 50px; background: rgba(255,255,255,0.85); }
-        .login-box .login-form .login-form-box .login-form-group { position: relative; height: 44px; line-height: 44px; margin-bottom: 0px; }
-        .login-box .login-form .login-form-box .login-form-tip { width: 100%; height: 16px; line-height: 16px; font-size: 12px; }
-        .login-box .login-form .login-form-box .login-form-des { width: 100%; height: 16px; line-height: 16px; font-size: 12px; margin-top: 16px; }
-        .login-box .login-form .login-form-box .login-from-input { border: 1px solid #c5cddb; background: #fff; font-size: 12px; }
-        .login-box .login-form .login-form-box .login-from-btn { display: block; width: 100%; height: 100%; text-align: center; margin-top: 16px; margin-bottom: 12px; font-size: 20px; background: #52b0fc; color: #fff; }
-            .login-box .login-form .login-form-box .login-from-btn:hover { background: #69bbfc }
-        .login-box .login-form .login-form-box .login-from-btn-disable, .login-box .login-form .login-form-box .login-from-btn-disable:hover { background: #79b1d5; color: #c8dfed; cursor: default; }
-    .login-box .login-form .login-annouce { height: 44px; overflow: hidden; background: rgba(255,255,255,0.85); }
-        .login-box .login-form .login-annouce .annouce-msg { position: relative; top: -8px; padding-left: 50px; font-size: 13px; color: red; }
-    .login-box .login-footer { padding: 30px 0px; background: #fff; }
-        .login-box .login-footer p { padding-bottom: 10px; text-align: center; color: #949494;}
-        .login-box .login-footer p a{ padding: 0 6px; color: #949494; }
 /**
  *  user css
  */

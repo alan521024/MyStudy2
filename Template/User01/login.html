@@ -1,57 +1,60 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login Title</title>
-    <link rel="stylesheet" href="icon/iconfont.css">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="application-name" content="Login Title" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>登录-网商银行</title>
+    <link type="text/css" rel="stylesheet" href="icon/iconfont.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
-<body class="account-bg">
-    <div class="full overflow-hide body-bg">
-        <div class="account-box">
-            <section>
-                <form method="post" lay-filter="login-form" onsubmit="return false;">
-                    <div class="account-title">
-                        Account Login
-                    </div>
-                    <div class="layui-form account-form">
-                        <div class="account-form-item">
-                            <input name="Account" autocomplete="off" placeholder="编号/账号/手机/邮箱." class="layui-input" type="text" lay-verify="required|s4-36"
-                                lay-verify-title="登录账号" />
-                        </div>
-                        <div class="account-form-item">
-                            <input name="Password" autocomplete="off" placeholder="请输入密码" class="layui-input" type="password" lay-verify="required|s6-36|safety"
-                                lay-verify-title="登录密码" />
-                        </div>
-                        <div class="account-form-item clearfix">
-                            <span>
-                                <input name="RememberMe" lay-skin="primary" title="记住密码" checked="checked" type="checkbox" value="true" />
-                            </span>
-                            <a asp-controller="account" asp-action="forgotpassword" class="right">找回密码? </a>
-                        </div>
-                       
-                        <div class="account-form-item clearfix">
-                            <div asp-validation-summary="All" class="validation-model-danger">错误描述：</div>
-                        </div>
-                        <div class="account-form-item submit-item">
-                            <button class="layui-btn layui-btn-normal" lay-submit lay-filter="login-form">立即提交</button>
-                        </div>
-                    </div>
-                    <div class="account-descript clearfix">
-                        <p>
-                            <span>没有账号？您可
-                                <a  href="register.html">免费注册</a>
-                            </span>
-                            <a asp-controller="home" asp-action="index" class="right">帮助中心</a>
-                        </p>
-                    </div>
-                </form>
-            </section>
+<body class="accoung-body">
+    <div class="container shadow4 head account-head">
+        <div class="wrapper wrapper-auto clearfix">
+            <div class="left logo">
+                <h1><a href="javascript:;"><img src="images/logo-account.png" class="logo-img" /></a></h1>
+            </div>
+            <div class="right menu">
+                <ul>
+                    <li><a href="javascript:;"><i class="iconfont d-icon-flow2"></i>&nbsp;服务大厅</a></li>
+                    <li><a href="javascript:;"><i class="iconfont d-icon-phone3"></i>&nbsp;95188-3</a></li>
+                    <li><a href="javascript:;"><i class="iconfont d-icon-helper1"></i>&nbsp;[帮助中心]</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="account-bg">
+        <img src="images/account-bg.png" />
+    </div>
+    <div class="container account-login">
+        <div class="wrapper">
+            <iframe src="login-part.html" class="accoung-login-frame"></iframe>
+        </div>
+    </div>
+    <div class="container foot account-foot">
+        <div class="wrapper foot-content clearfix">
+            <div class="left">
+                <img class="foot-tag-img1" src="images/copyright-tag1.png" />
+                <div class="foot-link">
+                    <a href="http://www.antgroup.com/page/alipay.htm" target="_blank" title="支付宝">支付宝</a> |
+                    <a href="http://www.antgroup.com/page/zmxy.htm" target="_blank" title="芝麻信用">芝麻信用</a> |
+                    <a href="http://www.antgroup.com/page/jinrongyun.htm" target="_blank" title="蚂蚁金融云">蚂蚁金融云</a> |
+                    <a href="http://www.antgroup.com/page/yuebao.htm" target="_blank" title="余额宝">余额宝</a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="foot-intro">
+                    <a href="https://www.mybank.cn/about.htm" target="_blank" title="关于我们">关于我们</a> |
+                    <a href="https://job.alibaba.com/zhaopin/index.htm" target="_blank" title="诚招英才">诚招英才</a>
+                </div>
+                <p class="foot-copyright">
+                    <span class="copyright">浙ICP备15020822号</span>Copyright © 2015-2017 浙江网商银行
+                </p>
+            </div>
         </div>
     </div>
 </body>
-
 </html>

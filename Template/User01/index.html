@@ -1,48 +1,35 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Page Title</title>
-    <link rel="stylesheet" href="icon/iconfont.css">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="application-name" content="Login Title" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <title>登录-网商银行</title>
+    <link type="text/css" rel="stylesheet" href="icon/iconfont.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
 </head>
-
-
-<body class="user-body">
-    <div class="container shadow1 header-bg ">
-        <div class="wrapper">
-            <div class="clearfix header">
-                <div class="left logo">
-                    <a asp-controller="home" asp-action="index">
-                        <img src="images/logo.png" />
-                    </a>
-                </div>
-                <div class="right menu">
-                    <span class="item">
-                        <a href="javascript:;">我的应有</a>
-                    </span>
-                    <span class="item">
-                        <a href="register.html">消息&nbsp;
-                            <i class="badge bg-gray">0</i>
-                        </a>
-                    </span>
-                    <span class="item">
-                        <a asp-controller="user" asp-action="index" href="login.html">你好：Admin</a>
-                    </span>
-                    <span class="item">
-                        <a asp-controller="account" asp-action="logoff">[退出]</a>
-                    </span>
-                </div>
+<body class="layout-body">
+    <div class="container shadow4 head">
+        <div class="wrapper clearfix">
+            <div class="left logo">
+                <h1><a href="javascript:;"><img src="images/logo-account.png" class="logo-img" /></a></h1>
+            </div>
+            <div class="right menu">
+                <ul>
+                    <li><a href="javascript:;"><i class="iconfont d-icon-flow2"></i>&nbsp;服务大厅</a></li>
+                    <li><a href="javascript:;"><i class="iconfont d-icon-phone3"></i>&nbsp;95188-3</a></li>
+                    <li><a href="javascript:;"><i class="iconfont d-icon-helper1"></i>&nbsp;[帮助中心]</a></li>
+                </ul>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="wrapper">
-            <div class="clearfix main">
-                <div class="left shadow2 slider">
+            <div class="clearfix layout-main">
+                <div class="left slider">
                     <div class="box box-no-border">
                         <div class="box-title"></div>
                         <div class="box-inner">
@@ -71,49 +58,56 @@
                             <div class="nav">
                                 <ul>
                                     <li>
-                                        <a asp-controller="user" asp-action="index" class="active">个人资料
+                                        <a asp-controller="user" asp-action="index" class="active">
+                                            个人资料
                                             <span class="arr">
                                                 <i class="icon iconfont d-icon-right1"></i>
                                             </span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="javascript:;" class="">实名认证
+                                        <a href="javascript:;" class="">
+                                            实名认证
                                             <span class="arr">
                                                 <i class="icon iconfont d-icon-right1"></i>
                                             </span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="javascript:;" class="">账号安全
+                                        <a href="javascript:;" class="">
+                                            账号安全
                                             <span class="arr">
                                                 <i class="icon iconfont d-icon-right1"></i>
                                             </span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="javascript:;" class="">支付管理
+                                        <a href="javascript:;" class="">
+                                            支付管理
                                             <span class="arr">
                                                 <i class="icon iconfont d-icon-right1"></i>
                                             </span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="javascript:;" class="">收件地址
+                                        <a href="javascript:;" class="">
+                                            收件地址
                                             <span class="arr">
                                                 <i class="icon iconfont d-icon-right1"></i>
                                             </span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="javascript:;" class="">操作记录
+                                        <a href="javascript:;" class="">
+                                            操作记录
                                             <span class="arr">
                                                 <i class="icon iconfont d-icon-right1"></i>
                                             </span>
                                         </a>
                                     </li>
                                     <li>
-                                        <a asp-controller="account" asp-action="logoff">退出登录
+                                        <a asp-controller="account" asp-action="logoff">
+                                            退出登录
                                             <span class="arr">
                                                 <i class="icon iconfont d-icon-right1"></i>
                                             </span>
@@ -125,38 +119,34 @@
                     </div>
                 </div>
                 <div class="right content">
-                    <div class="box box-no-border crumbs">
-                        <div class="box-title"></div>
-                        <div class="box-inner">
-                            <div class="crumbs-path">
-                                <a asp-controller="user" asp-action="index">首页</a>
-                                <i class="icon iconfont d-icon-right1"></i>
-                                <span>用户管理</span>
-                            </div>
-                            <div class="crumbs-sub">
-                                <ul class="clearfix">
-                                    <li>
-                                        <a href="javascript:;" class="active">基本信息</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">学校资料</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">工作记录</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">简历信息</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    11111
+                    <div class="content-tip"></div>
+                    <div class="content-title"><h2>个人资料</h2></div>
+                    <div class="content-box"></div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="container foot">
+        <div class="wrapper foot-content clearfix">
+            <div class="left">
+                <img class="foot-tag-img1" src="images/copyright-tag1.png" />
+                <div class="foot-link">
+                    <a href="http://www.antgroup.com/page/alipay.htm" target="_blank" title="支付宝">支付宝</a> |
+                    <a href="http://www.antgroup.com/page/zmxy.htm" target="_blank" title="芝麻信用">芝麻信用</a> |
+                    <a href="http://www.antgroup.com/page/jinrongyun.htm" target="_blank" title="蚂蚁金融云">蚂蚁金融云</a> |
+                    <a href="http://www.antgroup.com/page/yuebao.htm" target="_blank" title="余额宝">余额宝</a>
+                </div>
+            </div>
+            <div class="right">
+                <div class="foot-intro">
+                    <a href="https://www.mybank.cn/about.htm" target="_blank" title="关于我们">关于我们</a> |
+                    <a href="https://job.alibaba.com/zhaopin/index.htm" target="_blank" title="诚招英才">诚招英才</a>
+                </div>
+                <p class="foot-copyright">
+                    <span class="copyright">浙ICP备15020822号</span>Copyright © 2015-2017 浙江网商银行
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
-
-
 </html>
