@@ -61,9 +61,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      filename: process.env.NODE_ENV === 'testing'
-        ? 'index.html'
-        : config.build.index,
+      filename: config.build.index,
       template: 'index.html',
       inject: true,
       minify: {
@@ -74,33 +72,8 @@ const webpackConfig = merge(baseWebpackConfig, {
         // https://github.com/kangax/html-minifier#options-quick-reference
       },
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-      chunksSortMode: 'dependency',
-      chunks: ['manifest', 'vendor', 'app']
+      chunksSortMode: 'dependency'
     }),
-    new HtmlWebpackPlugin({
-      filename: config.build.one,
-      template: 'one.html',
-      inject: true,
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeAttributeQuotes: true
-      },
-      chunksSortMode: 'dependency',
-      chunks: ['manifest', 'vendor', 'one']
-    }),
-      new HtmlWebpackPlugin({
-          filename: config.build.two,
-          template: 'two.html',
-          inject: true,
-          minify: {
-              removeComments: true,
-              collapseWhitespace: true,
-              removeAttributeQuotes: true
-          },
-          chunksSortMode: 'dependency',
-          chunks: ['manifest', 'vendor', 'two']
-      }),
     // keep module.id stable when vendor modules does not change
     new webpack.HashedModuleIdsPlugin(),
     // enable scope hoisting
