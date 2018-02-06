@@ -7,7 +7,9 @@ const vueLoaderConfig = require('./vue-loader.conf')
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
+console.log('------entries-----')
 console.log(utils.entries())
+console.log('------htmlPlugin-----')
 console.log(utils.htmlPlugin())
 const createLintingRule = () => ({
   test: /\.(js|vue)$/,
