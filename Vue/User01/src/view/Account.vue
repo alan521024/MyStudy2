@@ -1,9 +1,13 @@
 <template>
-  <div id="app">The Account</div>
+  <div id="app">
+    <div class="box">
+      <router-view></router-view>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'Account'
-}
+  name: "Account"
+};
 </script>

@@ -1,24 +1,25 @@
-// The Vue build version to load with the `import` command
+// The vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 
-import Merge from 'webpack-merge'
-import Vue from 'vue'
+import merge from 'webpack-merge'
+import vue from 'vue'
 import router from './router'
 import accountView from './view/Account'
-import AccountService from './service/AccountService'
-import UserView from './view/User'
+import accountService from './service/accountService'
+import userView from './view/User'
 
-const getSetting = (() => {
-  return Merge({
+function getSetting(){
+  let isLogin = accountService.checkLogin();
+  return merge({
     el: '#app',
-    router
+    router,
+    components: { accountView, userView },
   }, {
-      components: AccountService.checkLogin() ? { accountView } : { UserView },
-      template: AccountService.checkLogin() ? '<accountView/>' : '<UserView/>'
+      template: isLogin ? '<accountView/>' : '<userView/>'
     });
-});
+};
 
-Vue.config.productionTip = false
+vue.config.productionTip = false
 
 /* eslint-disable no-new */
-new Vue(getSetting())
+new vue(getSetting())
