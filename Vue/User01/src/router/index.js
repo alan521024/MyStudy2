@@ -6,9 +6,9 @@ Vue.use(Router)
 
 const router = new Router({
   routes: [
-    {
-      path: '/'
-    }
+    // {
+    //   path: '/'
+    // }
   ]
 })
 
@@ -16,7 +16,7 @@ router.beforeEach((next) => {
   router.app.$nextTick(function () {
     if (!router.app.isAccount) {
       if (core.IsLogin()) {
-        window.top.location.href = '/test.html'
+        window.top.location.href = '/user.html'
       } else {
         window.top.location.href = '/account.html'
       }

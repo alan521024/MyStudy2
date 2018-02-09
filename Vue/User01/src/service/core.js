@@ -1,7 +1,7 @@
 'use strict'
 class Core {
     static IsLogin() {
-        return false;
+        return true;
     }
 }
 export default Core
