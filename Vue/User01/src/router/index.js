@@ -1,15 +1,28 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import core from '../service/core'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
-      path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      path: '/'
     }
   ]
 })
+
+router.beforeEach((next) => {
+  router.app.$nextTick(function () {
+    if (!router.app.isAccount) {
+      if (core.IsLogin()) {
+        window.top.location.href = '/test.html'
+      } else {
+        window.top.location.href = '/account.html'
+      }
+    }
+  })
+  next()
+})
+
+export default router
