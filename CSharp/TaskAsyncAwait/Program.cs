@@ -38,6 +38,38 @@ namespace TaskAsyncAwait
 
         #endregion
 
+        #region Task分批次
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine(ShowMessage("-------主线程启动-------"));
+
+            int batchTotal = 80 / 5; //分批执行数
+            Task.Run(() =>
+            {
+                for (var i = 0; i < batchTotal; i++)
+                {
+                    Task.Factory.StartNew((b) =>
+                    {
+                        for (var j = 0; j < 5; j++)
+                        {
+                            //出错测试
+                            //throw new Exception("123");
+
+                            //string.Format("Thread Id={0}, Message =  {1}", Thread.CurrentThread.ManagedThreadId.ToString(), msg)
+                            Console.WriteLine(ShowMessage(string.Format("Index: {0}   i:{1} j:{2}", (int)b * 5 + j, b, j)));
+                        }
+                    }, i);
+                }
+            });
+
+            Console.WriteLine(ShowMessage("-------主线程结束-------"));
+            Console.ReadKey();
+        }
+
+
+        #endregion
+
         #region Task（类似于ThreadPool） 
 
         //static void Main(string[] args)
@@ -110,22 +142,22 @@ namespace TaskAsyncAwait
         #endregion
 
         #region  async/await
-        static void Main(string[] args)
-        {
-            Console.WriteLine(ShowMessage("-------主线程启动-------"));
+        //static void Main(string[] args)
+        //{
+        //    Console.WriteLine(ShowMessage("-------主线程启动-------"));
 
-            var task = AsyncAwaitTest1(); //await 必须出现在async方法中，所以此方法不可用await AsyncAwaitTest1();
+        //    var task = AsyncAwaitTest1(); //await 必须出现在async方法中，所以此方法不可用await AsyncAwaitTest1();
 
-            Console.WriteLine(ShowMessage("-------主线程结束-------"));
+        //    Console.WriteLine(ShowMessage("-------主线程结束-------"));
 
-            //Console.WriteLine(ShowMessage("-------主线程启动-------"));
-            //Task<int> task = GetStrLengthAsync();
-            //Console.WriteLine(ShowMessage("主线程继续执行"));
-            //Console.WriteLine(ShowMessage("Task返回的值" + task.Result));
-            //Console.WriteLine(ShowMessage("-------主线程结束-------"));
+        //    //Console.WriteLine(ShowMessage("-------主线程启动-------"));
+        //    //Task<int> task = GetStrLengthAsync();
+        //    //Console.WriteLine(ShowMessage("主线程继续执行"));
+        //    //Console.WriteLine(ShowMessage("Task返回的值" + task.Result));
+        //    //Console.WriteLine(ShowMessage("-------主线程结束-------"));
 
-            Console.ReadKey();
-        }
+        //    Console.ReadKey();
+        //}
 
         static async Task AsyncAwaitTest1()
         {
