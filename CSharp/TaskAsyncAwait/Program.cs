@@ -40,32 +40,32 @@ namespace TaskAsyncAwait
 
         #region Task分批次
 
-        static void Main(string[] args)
-        {
-            Console.WriteLine(ShowMessage("-------主线程启动-------"));
+        //static void Main(string[] args)
+        //{
+        //    Console.WriteLine(ShowMessage("-------主线程启动-------"));
 
-            int batchTotal = 80 / 5; //分批执行数
-            Task.Run(() =>
-            {
-                for (var i = 0; i < batchTotal; i++)
-                {
-                    Task.Factory.StartNew((b) =>
-                    {
-                        for (var j = 0; j < 5; j++)
-                        {
-                            //出错测试
-                            //throw new Exception("123");
+        //    int batchTotal = 80 / 5; //分批执行数
+        //    Task.Run(() =>
+        //    {
+        //        for (var i = 0; i < batchTotal; i++)
+        //        {
+        //            Task.Factory.StartNew((b) =>
+        //            {
+        //                for (var j = 0; j < 5; j++)
+        //                {
+        //                    //出错测试
+        //                    //throw new Exception("123");
 
-                            //string.Format("Thread Id={0}, Message =  {1}", Thread.CurrentThread.ManagedThreadId.ToString(), msg)
-                            Console.WriteLine(ShowMessage(string.Format("Index: {0}   i:{1} j:{2}", (int)b * 5 + j, b, j)));
-                        }
-                    }, i);
-                }
-            });
+        //                    //string.Format("Thread Id={0}, Message =  {1}", Thread.CurrentThread.ManagedThreadId.ToString(), msg)
+        //                    Console.WriteLine(ShowMessage(string.Format("Index: {0}   i:{1} j:{2}", (int)b * 5 + j, b, j)));
+        //                }
+        //            }, i);
+        //        }
+        //    });
 
-            Console.WriteLine(ShowMessage("-------主线程结束-------"));
-            Console.ReadKey();
-        }
+        //    Console.WriteLine(ShowMessage("-------主线程结束-------"));
+        //    Console.ReadKey();
+        //}
 
 
         #endregion
