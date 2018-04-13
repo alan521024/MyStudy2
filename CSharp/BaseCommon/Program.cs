@@ -9,21 +9,31 @@ namespace BaseCommon
 {
     class Program
     {
+        //static void Main(string[] args)
+        //{
+        //    Console.WriteLine(ShowMessage("-------运算开始-------"));
+
+        //    decimal value1 = 5.0M, value2 = 4.0M, value3 = 11.0M, value4 = 15.0M;
+
+        //    Console.WriteLine(ShowMessage(string.Format("除法：商 {0}/{1}={3}   余 {0}%{1}={2}", value2, value1, value2 % value1, value2 / value1)));
+        //    Console.WriteLine(ShowMessage(string.Format("除法：商 {0}/{1}={3}   余 {0}%{1}={2}", value3, value1, value3 % value1, value3 / value1)));
+        //    Console.WriteLine(ShowMessage(string.Format("除法：商 {0}/{1}={3}   余 {0}%{1}={2}", value4, value1, value4 % value1, value4 / value1)));
+
+        //    Console.WriteLine(ShowMessage(string.Format("自加：{0}++ {2} ", value1, value1++,value1)));
+
+        //    Console.WriteLine(ShowMessage("-------运算结束-------"));
+        //    Console.ReadKey();
+        //}
         static void Main(string[] args)
         {
-            Console.WriteLine(ShowMessage("-------运算开始-------"));
-
-            decimal value1 = 5.0M, value2 = 4.0M, value3 = 11.0M, value4 = 15.0M;
-
-            Console.WriteLine(ShowMessage(string.Format("除法：商 {0}/{1}={3}   余 {0}%{1}={2}", value2, value1, value2 % value1, value2 / value1)));
-            Console.WriteLine(ShowMessage(string.Format("除法：商 {0}/{1}={3}   余 {0}%{1}={2}", value3, value1, value3 % value1, value3 / value1)));
-            Console.WriteLine(ShowMessage(string.Format("除法：商 {0}/{1}={3}   余 {0}%{1}={2}", value4, value1, value4 % value1, value4 / value1)));
-
-            Console.WriteLine(ShowMessage(string.Format("自加：{0}++ {2} ", value1, value1++,value1)));
-
-            Console.WriteLine(ShowMessage("-------运算结束-------"));
+            Console.WriteLine(ShowMessage("-------Boolean? 可空类型处理-------"));
+            bool? booleanValue= null;
+            Console.WriteLine(ShowMessage(string.Format("bool? booleanValue : {0}", booleanValue)));                      //null
+            Console.WriteLine(ShowMessage(string.Format("bool? booleanValue.HasValue : {0}", booleanValue.HasValue)));    //false 
+            Console.WriteLine(ShowMessage(string.Format("bool? booleanValue.Value : 报错")));                             //异常
             Console.ReadKey();
         }
+
 
         private static string ShowMessage(string msg)
         {
