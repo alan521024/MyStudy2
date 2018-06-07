@@ -1,0 +1,4 @@
+LIBRARY "record"
+
+EXPORTS
+	start @ 1
