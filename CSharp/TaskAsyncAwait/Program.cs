@@ -268,5 +268,9 @@ namespace TaskAsyncAwait
             return string.Format("Thread Id={0}, Message =  {1}", Thread.CurrentThread.ManagedThreadId.ToString(), msg);
         }
 
+        static void Main(string[] args)
+        {
+
+        }
     }
 }
