@@ -1,12 +1,14 @@
-﻿<Window x:Class="Record.MainWindow"
+﻿<Window x:Class="DllImport.App.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Record"
+        xmlns:local="clr-namespace:DllImport.App"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Button Margin="10" Click="Button_Click">测试</Button>
+        <StackPanel VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <Button Margin="10,10,389,10" Name="btnTest" Content="调用动态链接库Dll" Click="btnTest_Click"></Button>
+        </StackPanel>
     </Grid>
 </Window>

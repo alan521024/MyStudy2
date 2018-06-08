@@ -1,0 +1,4 @@
+LIBRARY "libdemo"
+
+EXPORTS
+	test @ 1

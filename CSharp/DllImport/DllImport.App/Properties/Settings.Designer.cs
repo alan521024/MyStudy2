@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Record.Properties
+namespace DllImport.App.Properties
 {
 
 
