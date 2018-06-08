@@ -1,0 +1,5 @@
+LIBRARY "RecordSpeech"
+
+EXPORTS
+	start @ 1
+	stop @ 2
