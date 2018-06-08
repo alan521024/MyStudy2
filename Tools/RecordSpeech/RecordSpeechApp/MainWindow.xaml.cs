@@ -21,7 +21,7 @@ namespace RecordSpeechApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        [DllImport(@"E:\Source\MyStudy\Tools\RecordSpeech\Library\RecordSpeech.dll", EntryPoint = "start", SetLastError = true, CharSet = CharSet.Ansi, ExactSpelling = false, CallingConvention = CallingConvention.StdCall)]
+        [DllImport(@"E:\Source\MyStudy\Tools\RecordSpeech\Output\RecordSpeech.dll", EntryPoint = "start", SetLastError = true, CharSet = CharSet.Ansi, ExactSpelling = false, CallingConvention = CallingConvention.StdCall)]
         extern static int start(string parm);
 
 
