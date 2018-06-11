@@ -1,0 +1,4 @@
+LIBRARY "speech"
+
+EXPORTS
+	start @ 1

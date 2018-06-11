@@ -1,0 +1,14 @@
+搭建了项目的架子.
+应用程序（Application）：含NPLWeb应用(结合layerui，制作列表，表单示例页。)，及Api接口应用
+运行框架(Framework):含基本配置，仓储数据库操作，业务领域，身份认证(身份授权相关没做)，日志记录，业务服务转webapi。
+工具类库（Infrastructure）：辅助操作方法
+资源文件(Resource):多语言资源文件
+插件（Plugs）：预留插件
+组件模块(Module): 现有及实现用户模块(账号相关)，NLP模块未编写代码。
+
+数据表：
+文档组表   :  NLP_DocumentGroup
+文档信息表 :  NLP_Document 
+文档内容表 :  NLP_DocumentContent（解析出来的句子） 
+文档关系表 ： NLP_DocumentRelation（文档/段落/句子相互间的所在段落，所在第几句位置关系）
+文档属性表 ： NLP_DocumentAttribute（文档/段落/句子 属性信息）
