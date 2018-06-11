@@ -55,6 +55,7 @@ namespace SpeechApp
 
         public static int Error(int code, string msg)
         {
+            MessageBox.Show(msg);
             return 1;
         }
 
