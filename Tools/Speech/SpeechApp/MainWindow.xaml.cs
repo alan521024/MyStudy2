@@ -21,8 +21,11 @@ namespace SpeechApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        [DllImport(@"E:\Source\MyStudy\Tools\Speech\output\speech.dll", EntryPoint = "start", SetLastError = true, CharSet = CharSet.Ansi, ExactSpelling = false, CallingConvention = CallingConvention.StdCall)]
-        extern static int start(string parm);
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        public delegate int startFun(int code, string msg);
+
+        [DllImport(@"E:\Source\MyStudy\Tools\Speech\output\speech.dll", EntryPoint = "startupTask", SetLastError = true, CharSet = CharSet.Ansi, ExactSpelling = false, CallingConvention = CallingConvention.StdCall)]
+        extern static int startupTask(string loginParams, string sessionBeginParams, startFun startCallback);
 
         public MainWindow()
         {
@@ -31,7 +34,17 @@ namespace SpeechApp
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
-            var cc = start("sub = iat, domain = iat, language = zh_cn, accent = mandarin, sample_rate = 16000, result_type = plain, result_encoding = gb2312");
+            var loginParams = "appid = 5b0dfbb4, work_dir = .";
+            var sessionBeginParams = "sub = iat, domain = iat, language = zh_cn, accent = mandarin, sample_rate = 16000, result_type = plain, result_encoding = gb2312";
+
+            var startCall = new startFun(Start);
+
+            var result = startupTask(loginParams, sessionBeginParams, startCall);
+        }
+
+        public static int Start(int code, string msg)
+        {
+            return 1;
         }
 
     }

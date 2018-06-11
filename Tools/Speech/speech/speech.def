@@ -1,4 +1,4 @@
 LIBRARY "speech"
 
 EXPORTS
-	start @ 1
+	startupTask @ 1
