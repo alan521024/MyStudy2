@@ -24,8 +24,12 @@ namespace SpeechApp
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         public delegate int startFun(int code, string msg);
 
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        public delegate int errorFun(int code, string msg);
+
+
         [DllImport(@"E:\Source\MyStudy\Tools\Speech\output\speech.dll", EntryPoint = "startupTask", SetLastError = true, CharSet = CharSet.Ansi, ExactSpelling = false, CallingConvention = CallingConvention.StdCall)]
-        extern static int startupTask(string loginParams, string sessionBeginParams, startFun startCallback);
+        extern static int startupTask(string loginParams, string sessionBeginParams, startFun startCallback, errorFun errorCallback);
 
         public MainWindow()
         {
@@ -38,11 +42,18 @@ namespace SpeechApp
             var sessionBeginParams = "sub = iat, domain = iat, language = zh_cn, accent = mandarin, sample_rate = 16000, result_type = plain, result_encoding = gb2312";
 
             var startCall = new startFun(Start);
+            var errorCall = new errorFun(Error);
 
-            var result = startupTask(loginParams, sessionBeginParams, startCall);
+            var result = startupTask(loginParams, sessionBeginParams, startCall, errorCall);
         }
 
         public static int Start(int code, string msg)
+        {
+            return 1;
+        }
+
+
+        public static int Error(int code, string msg)
         {
             return 1;
         }
