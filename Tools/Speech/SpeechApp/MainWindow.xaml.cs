@@ -21,15 +21,27 @@ namespace SpeechApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static int  defaultCode = -1;
+
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
-        public delegate int startFun(int code, string msg);
+        public delegate int startFun();
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        public delegate int stopFun(int code);
+
+        [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
+        public delegate int resultFun(string result, char isEnd);
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         public delegate int errorFun(int code, string msg);
 
 
         [DllImport(@"E:\Source\MyStudy\Tools\Speech\output\speech.dll", EntryPoint = "startupTask", SetLastError = true, CharSet = CharSet.Ansi, ExactSpelling = false, CallingConvention = CallingConvention.StdCall)]
-        extern static int startupTask(string loginParams, string sessionBeginParams, startFun startCallback, errorFun errorCallback);
+        extern static int startupTask(string loginParams, string sessionBeginParams,
+            startFun startCallback,
+            stopFun stopCallback,
+            resultFun resultCallback,
+            errorFun errorCallback);
 
         public MainWindow()
         {
@@ -42,22 +54,32 @@ namespace SpeechApp
             var sessionBeginParams = "sub = iat, domain = iat, language = zh_cn, accent = mandarin, sample_rate = 16000, result_type = plain, result_encoding = gb2312";
 
             var startCall = new startFun(Start);
+            var stopCall = new stopFun(Stop);
+            var resultCall = new resultFun(Result);
             var errorCall = new errorFun(Error);
 
-            var result = startupTask(loginParams, sessionBeginParams, startCall, errorCall);
+            var result = startupTask(loginParams, sessionBeginParams, startCall, stopCall, resultCall, errorCall);
         }
 
-        public static int Start(int code, string msg)
+        public static int Start()
         {
-            return 1;
+            return defaultCode;
         }
 
+        public static int Stop(int reason)
+        {
+            return defaultCode;
+        }
+
+        public static int Result(string result, char isLast)
+        {
+            return defaultCode;
+        }
 
         public static int Error(int code, string msg)
         {
-            MessageBox.Show(msg);
-            return 1;
+            //MessageBox.Show(msg);
+            return defaultCode;
         }
-
     }
 }

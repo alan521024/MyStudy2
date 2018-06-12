@@ -25,7 +25,7 @@
 #define SR_DBGON 0
 #if SR_DBGON == 1
 #	define sr_dbg printf
-//#	define __FILE_SAVE_VERIFY__  /* save the recording data into file 'rec.pcm' too */
+#	define __FILE_SAVE_VERIFY__  /* save the recording data into file 'rec.pcm' too */
 #else
 #	define sr_dbg
 #endif
