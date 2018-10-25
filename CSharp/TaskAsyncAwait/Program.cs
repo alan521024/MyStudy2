@@ -88,7 +88,7 @@ namespace TaskAsyncAwait
 
         //    //Task启动的是后台线程，要在主线程中等待后台线程执行完毕，可以调用Wait方法
         //    //可注释查看效果及设置休眠时间查看
-        //    //task.Wait();
+        //    //task.Wait();P
 
         //    Console.WriteLine(ShowMessage("主线程结束"));
         //    Console.ReadKey();
